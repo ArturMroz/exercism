@@ -6,7 +6,6 @@ using System.Text.RegularExpressions;
 public class NucleotideCount
 {
     private const string nucleotides = "ACGT";
-    private IDictionary<char, int> nucleotideCounts;
 
     public NucleotideCount(string sequence)
     {
@@ -17,10 +16,10 @@ public class NucleotideCount
             throw new InvalidNucleotideException();
         }
 
-        nucleotideCounts = nucleotides.ToDictionary(k => k, k => sequence.Count(x => x == k));
+        NucleotideCounts = nucleotides.ToDictionary(k => k, k => sequence.Count(x => x == k));
     }
 
-    public IDictionary<char, int> NucleotideCounts { get => nucleotideCounts; }
+    public IDictionary<char, int> NucleotideCounts { get; private set; }
 }
 
 public class InvalidNucleotideException : Exception { }
