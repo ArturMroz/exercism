@@ -6,3 +6,4 @@ target
 .vs
 .pytest_cache
 __pycache__
+*.pyc
