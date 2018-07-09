@@ -1,33 +1,31 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
 public class SaddlePoints
 {
-    private IEnumerable<int> matrix;
+    private readonly int[,] matrix;
 
     public SaddlePoints(int[,] values)
     {
-        matrix = values.Cast<int>();
+        matrix = values;
     }
 
     public IEnumerable<Tuple<int, int>> Calculate()
     {
-        var size = (int)Math.Sqrt(matrix.Count()); 
-        for (int x = 0; x < size; x++)
-        {
-            for (int y = 0; y < size; y++)
-            {
-                var row = matrix.Skip(size * x).Take(size).Where((_, i) => i != y);
-                var column = matrix.Where((_, i) => (i - y) % size == 0).Where((_, i) => i != x);
-                var current = matrix.Skip(size * x + y).First();
+        var (width, height) = (matrix.GetLength(0), matrix.GetLength(1));
 
-                if ((current >= row.Max() && current <= column.Min()))
-                {
-                    yield return (x, y).ToTuple();
-                }
-            }
-        }
+        var rowMaxes = Enumerable.Range(0, height)
+            .Select(x => Enumerable.Range(0, width).Max(y => matrix[x, y]));
+
+        var colMins = Enumerable.Range(0, width)
+            .Select(y => Enumerable.Range(0, height).Min(x => matrix[x, y]));
+
+        return rowMaxes
+            .SelectMany((rowMax, x) => colMins
+                .Select((colMin, y) => (colMin: colMin, y: y))
+                .Where(point => rowMax == point.colMin)
+                .Select(point => (x, point.y).ToTuple())
+            );
     }
 }
