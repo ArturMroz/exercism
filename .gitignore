@@ -1,7 +1,6 @@
 bin
 obj
 target
-*.csproj
 .vscode
 .vs
 .pytest_cache
