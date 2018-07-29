@@ -4,33 +4,40 @@ using System.Linq;
 
 public static class PalindromeProducts
 {
-    private static IDictionary<int, List<(int, int)>> GetProducts(int minFactor, int maxFactor)
+    private enum CompareMode { Min, Max }
+
+    private static (int, IEnumerable<(int, int)>) GetExtremePalindrome(int minFactor, int maxFactor, CompareMode mode)
     {
-        var temp = new Dictionary<int, List<(int, int)>>();
+        var extremeFactor = mode == CompareMode.Max ? int.MinValue : int.MaxValue;
+        var curExtrema = (extremeFactor: extremeFactor, factors: new List<(int, int)>());
+        var hasFoundPalindrome = false;
+        int curProduct;
 
         for (int i = minFactor; i <= maxFactor; i++)
         {
             for (int j = i; j <= maxFactor; j++)
             {
-                var current = i * j;
-                if (IsPalindrome(current))
+                curProduct = i * j;
+                if (IsPalindrome(curProduct))
                 {
-                    var factors = (i, j);
-                    if (temp.ContainsKey(current))
+                    hasFoundPalindrome = true;
+
+                    if ((mode == CompareMode.Max && curProduct > curExtrema.extremeFactor) ||
+                        (mode == CompareMode.Min && curProduct < curExtrema.extremeFactor))
                     {
-                        temp[current].Add(factors);
+                        curExtrema = (curProduct, new List<(int, int)> { (i, j) });
                     }
-                    else
+                    else if (curProduct == curExtrema.extremeFactor)
                     {
-                        temp.Add(current, new List<(int, int)> { factors });
+                        curExtrema.factors.Add((i, j));
                     }
                 }
             }
         }
 
-        if (temp.Any())
+        if (hasFoundPalindrome)
         {
-            return temp;
+            return curExtrema;
         }
         else
         {
@@ -40,8 +47,8 @@ public static class PalindromeProducts
 
     public static bool IsPalindrome(int number)
     {
-        int temp = number;
-        int reversed = 0;
+        var temp = number;
+        var reversed = 0;
         int remaninder;
 
         while (temp > 0)
@@ -54,22 +61,12 @@ public static class PalindromeProducts
         return number == reversed;
     }
 
-    // public static bool IsPalindromeSlow(int number)
-    // {
-    //     return number.ToString() == string.Concat(number.ToString().Reverse());
-    // }
+    // public static bool IsPalindromeSlow(int number) =>
+    //     number.ToString() == string.Concat(number.ToString().Reverse());
 
-    public static (int, IEnumerable<(int, int)>) Largest(int minFactor, int maxFactor)
-    {
-        var palindromes = GetProducts(minFactor, maxFactor);
-        var max = palindromes.Aggregate((curMax, x) => x.Key > curMax.Key ? x : curMax);
-        return (max.Key, max.Value);
-    }
+    public static (int, IEnumerable<(int, int)>) Largest(int minFactor, int maxFactor) =>
+        GetExtremePalindrome(minFactor, maxFactor, CompareMode.Max);
 
-    public static (int, IEnumerable<(int, int)>) Smallest(int minFactor, int maxFactor)
-    {
-        var palindromes = GetProducts(minFactor, maxFactor);
-        var min = palindromes.Aggregate((curMin, x) => x.Key < curMin.Key ? x : curMin);
-        return (min.Key, min.Value);
-    }
+    public static (int, IEnumerable<(int, int)>) Smallest(int minFactor, int maxFactor) =>
+        GetExtremePalindrome(minFactor, maxFactor, CompareMode.Min);
 }
