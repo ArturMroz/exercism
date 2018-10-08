@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 public static class IsbnVerifier
 {
@@ -9,11 +10,8 @@ public static class IsbnVerifier
 
         number = number.Replace("-", string.Empty);
 
-        var isValid = number.Length == 10
-                   && number.Take(number.Length - 1).All(d => char.IsDigit(d))
-                   && (char.IsDigit(number.Last()) || number.Last() == 'X');
-
-        if (!isValid) return false;
+        var regex = new Regex(@"^(\d{9}(?:\d|X))$");
+        if (!regex.IsMatch(number)) return false;
 
         var multiplier = 10;
         var checksum = number.Sum(d => char.GetNumericValue(d) * multiplier--);

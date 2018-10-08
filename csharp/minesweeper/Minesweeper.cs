@@ -44,35 +44,4 @@ public static class Minesweeper
             }).ToArray()))
         .ToArray();
 
-    public static string[] AnnotateLongerVersion(string[] input)
-    {
-        var resultBoard = new string[input.Length];
-
-        for (int y = 0; y < input.Length; y++)
-        {
-            var curRow = string.Empty;
-
-            for (int x = 0; x < input[0].Length; x++)
-            {
-                var curField = input[y][x];
-
-                if (curField == ' ')
-                {
-                    var adjacentMinesCount = GetAdjacentFields(x, y)
-                        .Sum(field => IsFieldAMine(field.Item1, field.Item2, input) ? 1 : 0);
-
-                    if (adjacentMinesCount > 0)
-                    {
-                        curField = adjacentMinesCount.ToString()[0];
-                    }
-                }
-
-                curRow += curField;
-            }
-
-            resultBoard[y] = curRow;
-        }
-
-        return resultBoard;
-    }
 }
