@@ -1,24 +1,24 @@
-function Triangle(a, b, c) {
-  this.a = a;
-  this.b = b;
-  this.c = c;
+export default class Triangle {
+  constructor(...edges) {
+    this.edges = edges;
+  }
+
+  kind() {
+    const [a, b, c] = this.edges;
+
+    if (a <= 0 || b <= 0 || c <= 0) {
+      throw new Error('Edge has to be bigger than 0.');
+    }
+    if (a + b <= c || a + c <= b || b + c <= a) {
+      throw new Error('Illegal triangle.');
+    }
+    if (a === b && b === c) {
+      return 'equilateral';
+    }
+    if (a === b || b === c || c === a) {
+      return 'isosceles';
+    }
+
+    return 'scalene';
+  }
 }
-
-Triangle.prototype.kind = function kind() {
-  if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
-    throw new Error('Edge has to be bigger than 0.');
-  }
-  if ((this.a + this.b < this.c) || this.a + this.c < this.b || this.b + this.c < this.a) {
-    throw new Error('Illegal triangle.');
-  }
-  if (this.a === this.b && this.b === this.c && this.a === this.c) {
-    return 'equilateral';
-  }
-  if (this.a === this.b || this.b === this.c || this.c === this.a) {
-    return 'isosceles';
-  }
-
-  return 'scalene';
-};
-
-module.exports = Triangle;
