@@ -6,3 +6,5 @@ target
 .pytest_cache
 __pycache__
 *.pyc
+node_modules
+.eslintrc.js
