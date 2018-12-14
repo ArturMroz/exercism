@@ -5,5 +5,8 @@ public static class Pangram
 {
   private const string _alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-  public static bool IsPangram(string input) => _alphabet.All(input.ToLower().Contains);
+  public static bool IsPangram(string input)
+  {
+    return _alphabet.All(input.ToLower().Contains);
+  }
 }
