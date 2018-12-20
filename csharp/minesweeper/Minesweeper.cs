@@ -3,45 +3,62 @@ using System.Linq;
 
 public static class Minesweeper
 {
-    private static bool IsFieldAMine(int x, int y, string[] input)
+  public static string[] Annotate(string[] input)
+  {
+    return input.Select((row, y) =>
+      String.Concat(row.Select((_, x) => GetMinesCount(x, y))))
+      .ToArray();
+
+    char GetMinesCount(int x, int y)
     {
-        try
-        {
-            return input[y][x] == '*';
-        }
-        catch
-        {
-            return false;
-        }
+      if (input[y][x] == '*') return input[y][x];
+
+      var range = Enumerable.Range(-1, 3);
+      var neighbours = range.SelectMany(a => range.Select(b => (x: x + a, y: y + b)));
+      var adjacentMinesSum = neighbours.Sum(n => Score(n.x, n.y));
+
+      return adjacentMinesSum == 0 ? ' ' : adjacentMinesSum.ToString()[0];
     }
 
-    private static (int, int)[] GetAdjacentFields(int x, int y) =>
-        new[]
+    int Score(int x, int y)
+    {
+      if (0 > y || y >= input.Length) return 0;
+      if (0 > x || x >= input[y].Length) return 0;
+
+      return input[y][x] == '*' ? 1 : 0;
+    }
+  }
+
+  public static string[] Annotate_woLINQ(string[] input)
+  {
+    var result = new string[input.Length];
+
+    for (int y = 0; y < input.Length; y++)
+    {
+      var curRow = input[y].ToCharArray();
+
+      for (int x = 0; x < input[y].Length; x++)
+      {
+        if (input[y][x] == '*') continue;
+
+        var neigbours = new[] { (-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1) };
+        int counter = 0;
+
+        foreach (var (xWalk, yWalk) in neigbours)
         {
-            (x - 1, y),
-            (x - 1, y - 1),
-            (x - 1, y + 1),
-            (x, y - 1),
-            (x, y + 1),
-            (x + 1, y),
-            (x + 1, y - 1),
-            (x + 1, y + 1),
-        };
+          try
+          {
+            if (input[y + yWalk][x + xWalk] == '*') counter++;
+          }
+          catch (IndexOutOfRangeException) { }
+        }
 
-    public static string[] Annotate(string[] input) =>
-        input.Select((row, y) =>
-            new String(row.Select((field, x) =>
-            {
-                if (field == ' ')
-                {
-                    var adjacentMinesSum = GetAdjacentFields(x, y)
-                        .Sum(af => IsFieldAMine(af.Item1, af.Item2, input) ? 1 : 0);
+        curRow[x] = counter == 0 ? ' ' : counter.ToString()[0];
+      }
 
-                    if (adjacentMinesSum > 0) return adjacentMinesSum.ToString()[0];
-                }
+      result[y] = new string(curRow);
+    }
 
-                return field;
-            }).ToArray()))
-        .ToArray();
-
+    return result;
+  }
 }
