@@ -8,8 +8,8 @@ public static class Dominoes
     {
         if (!dominoes.Any()) return true;
 
-        var freeStones = dominoes.Skip(1).ToList();
 
+        var freeStones = dominoes.Skip(1).ToList();
         var chain = new List<(int, int)> { dominoes.First() };
 
         return Backtrack();
