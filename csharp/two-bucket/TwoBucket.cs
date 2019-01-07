@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 public enum Bucket
 {
@@ -17,102 +15,40 @@ public class TwoBucketResult
 
 public class TwoBucket
 {
-    private readonly int _bucketOneSize;
-    private readonly int _bucketTwoSize;
-    private readonly Bucket _startBucket;
+    private readonly int _startCapacity;
+    private readonly int _otherCapacity;
+    private readonly Bucket _start;
+    private readonly Bucket _other;
 
-    public TwoBucket(int bucketOne, int bucketTwo, Bucket startBucket)
-    {
-        _bucketOneSize = bucketOne;
-        _bucketTwoSize = bucketTwo;
-        _startBucket = startBucket;
-    }
+    public TwoBucket(int bucketOne, int bucketTwo, Bucket startBucket) =>
+        (_startCapacity, _otherCapacity, _start, _other) =
+            startBucket == Bucket.One ? (bucketOne, bucketTwo, Bucket.One, Bucket.Two) :
+                                        (bucketTwo, bucketOne, Bucket.Two, Bucket.One);
 
     public TwoBucketResult Measure(int goal)
     {
-        var result = new TwoBucketResult { Moves = int.MaxValue };
-        var startBuckets = Fill(_startBucket, (0, 0));
-        var methods = new MethodDelegate[] { Fill, Empty, PourTo };
+        if (_startCapacity == goal)
+            return new TwoBucketResult { Moves = 1, GoalBucket = _start, OtherBucket = 0 };
+        if (_otherCapacity == goal)
+            return new TwoBucketResult { Moves = 2, GoalBucket = _other, OtherBucket = _startCapacity };
 
-        Backtrack(startBuckets, new List<(int, int)> { startBuckets });
+        var moves = 0;
+        var startState = 0;
+        var otherState = 0;
 
-        return result;
-
-        void Backtrack((int, int) buckets, IEnumerable<(int, int)> history)
+        while (true)
         {
-            if (history.Count() > result.Moves) return;
+            if (startState == 0)
+                (startState, moves) = (_startCapacity, moves + 1);
 
-            if (buckets.Item1 == goal || buckets.Item2 == goal)
-            {
-                result.Moves = history.Count();
-                if (buckets.Item1 == goal)
-                {
-                    result.OtherBucket = buckets.Item2;
-                    result.GoalBucket = Bucket.One;
-                }
-                else
-                {
-                    result.OtherBucket = buckets.Item1;
-                    result.GoalBucket = Bucket.Two;
-                }
+            var amount = Math.Min(startState, _otherCapacity - otherState);
+            (startState, otherState, moves) = (startState - amount, otherState + amount, moves + 1);
 
-                return;
-            }
+            if (startState == goal)
+                return new TwoBucketResult { Moves = moves, GoalBucket = _start, OtherBucket = otherState };
 
-            foreach (var method in methods)
-            {
-                foreach (Bucket bucketNumber in Enum.GetValues(typeof(Bucket)))
-                {
-                    var newBuckets = method.Invoke(bucketNumber, buckets);
-
-                    if (history.Contains(newBuckets)) continue;
-
-                    if (_startBucket == Bucket.One && newBuckets == (0, _bucketTwoSize))
-                        continue;
-
-                    if (_startBucket == Bucket.Two && newBuckets == (_bucketOneSize, 0))
-                        continue;
-
-                    var newHistory = history.ToList();
-                    newHistory.Add(newBuckets);
-                    Backtrack(newBuckets, newHistory);
-                }
-            }
+            if (otherState == _otherCapacity)
+                (otherState, moves) = (0, moves + 1);
         }
-    }
-
-    public delegate (int, int) MethodDelegate(Bucket bucket, (int, int) buckets);
-
-    private (int, int) PourTo(Bucket goalBucket, (int, int) buckets)
-
-    {
-        var (b1, b2) = buckets;
-
-        if (goalBucket == Bucket.One)
-        {
-            var howMuchWillFit = Math.Min(_bucketOneSize - b1, b2);
-            b1 += howMuchWillFit;
-            b2 -= howMuchWillFit;
-        }
-        else
-        {
-            var howMuchWillFit = Math.Min(_bucketTwoSize - b2, b1);
-            b2 += howMuchWillFit;
-            b1 -= howMuchWillFit;
-        }
-
-        return (b1, b2);
-    }
-
-    private (int, int) Empty(Bucket bucket, (int, int) buckets)
-    {
-        if (bucket == Bucket.One) return (0, buckets.Item2);
-        else return (buckets.Item1, 0);
-    }
-
-    private (int, int) Fill(Bucket bucket, (int, int) buckets)
-    {
-        if (bucket == Bucket.One) return (_bucketOneSize, buckets.Item2);
-        else return (buckets.Item1, _bucketTwoSize);
     }
 }
