@@ -14,10 +14,9 @@ let proteins (rna: string): string list =
     | "UAA" | "UAG" | "UGA"         -> None
     | _                             -> None
 
-    let codons = rna |> Seq.chunkBySize 3 |> Seq.map String
-
-    codons
-    |> Seq.map translate
+    rna
+    |> Seq.chunkBySize 3
+    |> Seq.map (String >> translate)
     |> Seq.takeWhile ((<>) None)
     |> Seq.choose id
     |> Seq.toList
