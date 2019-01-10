@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Proverb.fs" />
-    <Compile Include="ProverbTest.fs" />
+    <Compile Include="SaddlePoints.fs" />
+    <Compile Include="SaddlePointsTest.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,4 +17,5 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
     <PackageReference Include="FsUnit.xUnit" Version="3.2.0" />
   </ItemGroup>
+
 </Project>

@@ -24,6 +24,5 @@ let prime nth : int option =
     | 0 -> None
     | _ -> 
         primes
-        |> Seq.skip (nth - 1)
-        |> Seq.head
+        |> Seq.item (nth - 1)
         |> Some
