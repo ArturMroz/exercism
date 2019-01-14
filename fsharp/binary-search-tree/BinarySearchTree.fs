@@ -1,11 +1,32 @@
 ﻿module BinarySearchTree
 
-let left node  = failwith "You need to implement this function."
+type Node = {
+    Data : int
+    Left : Node option
+    Right : Node option
+}
 
-let right node = failwith "You need to implement this function."
+let left node = node.Left
+let right node = node.Right
+let data node = node.Data
 
-let data node = failwith "You need to implement this function."
+let create items =
+    let rec insert value = function
+        | Some node ->
+            if value <= node.Data then 
+                { node with Left = Some (insert value node.Left) }
+            else 
+                { node with Right = Some (insert value node.Right) }
+        | None ->
+            { Data = value; Left = None; Right = None }
 
-let create items = failwith "You need to implement this function."
+    items 
+    |> List.fold (fun acc elem -> Some (insert elem acc)) None
+    |> Option.get
 
-let sortedData node = failwith "You need to implement this function."
+let sortedData node = 
+    let rec flatten = function
+        | Some n -> flatten n.Left @ n.Data :: flatten n.Right
+        | None -> []
+
+    flatten (Some node)
