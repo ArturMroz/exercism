@@ -12,11 +12,10 @@ let data node = node.Data
 
 let create items =
     let rec insert value = function
+        | Some node when value <= node.Data ->
+            { node with Left = Some (insert value node.Left) }
         | Some node ->
-            if value <= node.Data then 
-                { node with Left = Some (insert value node.Left) }
-            else 
-                { node with Right = Some (insert value node.Right) }
+            { node with Right = Some (insert value node.Right) }
         | None ->
             { Data = value; Left = None; Right = None }
 
