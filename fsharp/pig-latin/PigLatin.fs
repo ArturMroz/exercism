@@ -8,10 +8,10 @@ let (|Prefix|_|) (prefixes: string list) (str:string) =
 let toPigLatin = function
     | Prefix ["a";"e";"i";"o";"u";"yt";"xr"] (prefix, rest) ->
         sprintf "%s%say" prefix rest 
-    | Prefix ["ch";"qu";"squ";"thr";"th";"rh";"sch"]  (prefix, rest) ->
+    | Prefix ["ch";"qu";"squ";"thr";"th";"rh";"sch"] (prefix, rest) ->
         sprintf "%s%say" rest prefix
     | word ->
-        sprintf "%s%cay" word.[1..] word.[0] 
+        sprintf "%s%cay" word.[1..] word.[0]
 
 let translate (input: string) = 
     input.Split ' '
