@@ -18,4 +18,6 @@ tests =
             \() -> Expect.equal (Ok "U") (toRNA "A")
         , test "complement" <|
             \() -> Expect.equal (Ok "UGCACCAGAAUU") (toRNA "ACGTGGTCTTAA")
+        , test "complement2" <|
+            \() -> Expect.equal (Err 'x') (toRNA "xACGTGGTCTTAA")
         ]
