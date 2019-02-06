@@ -23,7 +23,6 @@ translate nucleotide =
 toRNA : String -> Result Char String
 toRNA dna =
     dna
-        |> String.toList
-        |> List.foldr
+        |> String.foldr
             (translate >> Result.map2 String.cons)
             (Ok "")
