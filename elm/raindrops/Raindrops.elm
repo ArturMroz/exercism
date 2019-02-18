@@ -1,6 +1,7 @@
 module Raindrops exposing (raindrops)
 
 
+drops : List ( Int, String )
 drops =
     [ ( 3, "Pling" )
     , ( 5, "Plang" )

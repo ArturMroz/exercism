@@ -10,7 +10,7 @@ public static class ParallelLetterFrequency
     {
         var freqMap = new ConcurrentDictionary<char, int>();
 
-        Parallel.ForEach(texts, text => 
+        Parallel.ForEach(texts, text =>
         {
             foreach (var ch in text.ToLower().Where(char.IsLetter))
             {

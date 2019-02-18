@@ -1,10 +1,11 @@
 ﻿module CollatzConjecture
 
-let steps (number: int): int option =
-    let rec stepsRec stepsSoFar = function
-        | n when n <= 0 -> None
-        | 1 -> Some stepsSoFar
-        | n when n % 2 = 0 -> stepsRec (stepsSoFar + 1) (n / 2)
-        | n -> stepsRec (stepsSoFar + 1) (3 * n + 1)
-    
-    stepsRec 0 number
+let rec steps = function
+    | n when n <= 0 ->
+        None
+    | 1 ->
+        Some 0
+    | n ->
+        if n % 2 = 0 then n / 2 else n * 3 + 1
+        |> steps
+        |> Option.map ((+) 1)
