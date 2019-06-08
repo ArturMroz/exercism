@@ -11,18 +11,13 @@ public static class Luhn
 
     if (!trimmed.All(char.IsDigit)) return false;
 
-    var luhnNumber = trimmed
-        .Reverse()
-        .Select(ch => (int)char.GetNumericValue(ch))
-        .Select((n, i) => i % 2 != 0 ? Doubled(n) : n)
-        .Sum();
+    var luhnChecksum = trimmed
+      .Reverse()
+      .Select(char.GetNumericValue)
+      .Select((n, i) => i % 2 != 0 ? n * 2 : n)
+      .Select(n => n > 9 ? n - 9 : n)
+      .Sum();
 
-    return luhnNumber % 10 == 0;
-  }
-
-  private static int Doubled(int n)
-  {
-    int doubled = n * 2;
-    return doubled > 9 ? doubled - 9 : doubled;
+    return luhnChecksum % 10 == 0;
   }
 }
