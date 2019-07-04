@@ -1,4 +1,4 @@
-function accumulate<T>(collection: T[], fn: (n: T) => {}) {
+function accumulate<T, U>(collection: T[], fn: (n: T) => U): U[] {
   return collection.map((el) => fn(el))
 }
 
