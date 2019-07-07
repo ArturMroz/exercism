@@ -1,9 +1,9 @@
-function keep<T>(xs: T[], fn: (el: T) => boolean): T[] {
-  return xs.filter((x) => fn(x))
+function keep<T>(xs: T[], predicate: (e: T) => boolean): T[] {
+  return xs.filter((x) => predicate(x))
 }
 
-function discard<T>(xs: T[], fn: (el: T) => boolean): T[] {
-  return xs.filter((x) => !fn(x))
+function discard<T>(xs: T[], predicate: (e: T) => boolean): T[] {
+  return xs.filter((x) => !predicate(x))
 }
 
 export { keep, discard }
