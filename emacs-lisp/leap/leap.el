@@ -6,9 +6,9 @@
 
 (defun leap-year-p (year)
   "Check if given YEAR is a leap year."
-  (and (= 0 (mod year 4))
-       (or (/= 0 (mod year 100))
-           (= 0 (mod year 400)))))
+  (and (zerop (mod year 4))
+       (or (plusp (mod year 100))
+           (zerop (mod year 400)))))
 
-(provide #'leap-year-p)
+(provide 'leap-year-p)
 ;;; leap.el ends here
