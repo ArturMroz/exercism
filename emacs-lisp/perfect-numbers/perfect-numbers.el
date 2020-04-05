@@ -17,10 +17,11 @@
           (t 'deficient))))
 
 (defun factors (number)
+  "Return all factors of NUMBER."
   (let ((retval '(1))
+        (i 2)
         (limit (round (sqrt number))))
 
-    (setq i 2)
     (while (<= i limit)
       (when (zerop (% number i))
         (add-to-list 'retval i)
@@ -31,4 +32,3 @@
 
 (provide 'perfect-numbers)
 ;;; perfect-numbers.el ends here
-
