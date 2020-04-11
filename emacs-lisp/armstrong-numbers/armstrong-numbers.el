@@ -16,12 +16,11 @@
   "Check if NUMBER is an armstrong number."
   (let* ((digits (get-digits number))
          (number-of-digits (length digits))
-         (armstrong-sum
-          (reduce
-           (lambda (acc el)
-             (+ acc (expt el number-of-digits)))
-           digits
-           :initial-value 0)))
+         (armstrong-sum (reduce
+                         (lambda (acc el)
+                           (+ acc (expt el number-of-digits)))
+                         digits
+                         :initial-value 0)))
     (= number armstrong-sum)))
 
 (defun armstrong-slow-p (number)

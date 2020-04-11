@@ -4,7 +4,6 @@
 
 ;;; Code:
 
-
 (defvar allergens
   '(("eggs" . 1)
     ("peanuts" . 2)
