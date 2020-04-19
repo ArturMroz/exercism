@@ -3,10 +3,10 @@ class Hamming
     if strand_a.length != strand_b.length
       raise ArgumentError, 'Strands have different lengths'
     end
-    
+
     strand_a
-      .split("")
-      .zip(strand_b.split(""))
-      .sum { |x, y| x != y ? 1 : 0 }
+      .chars
+      .zip(strand_b.chars)
+      .count { |x, y| x != y }
   end
 end
