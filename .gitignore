@@ -3,6 +3,7 @@ obj
 target
 .vscode
 .vs
+.log
 .pytest_cache
 __pycache__
 *.pyc
