@@ -1,8 +1,7 @@
 class Acronym
   def self.abbreviate(sentence)
     sentence
-      .split(/\W+/)
-      .map(&:chr)
+      .scan(/\b\w/)
       .join
       .upcase
   end
