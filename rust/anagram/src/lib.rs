@@ -6,8 +6,11 @@ pub fn anagrams_for<'a>(word: &'a str, possible_anagrams: &'a [&str]) -> HashSet
 
     possible_anagrams
         .iter()
+        .filter(|x| 
+            word.len() == x.len() 
+            && sorted_word == sort_str(&x) 
+            && lowercased_word != x.to_lowercase())
         .cloned()
-        .filter(|x| lowercased_word != x.to_lowercase() && sorted_word == sort_str(x))
         .collect()
 }
 
