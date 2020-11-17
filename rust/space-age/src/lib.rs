@@ -8,60 +8,27 @@ impl From<u64> for Duration {
 }
 
 pub trait Planet {
+    const ORBITAL_PERIOD: f64;
+
     fn years_during(d: &Duration) -> f64 {
-        d.0
+        d.0 / Self::ORBITAL_PERIOD
     }
 }
 
-pub struct Mercury;
-pub struct Venus;
-pub struct Earth;
-pub struct Mars;
-pub struct Jupiter;
-pub struct Saturn;
-pub struct Uranus;
-pub struct Neptune;
-
-impl Planet for Earth {}
-
-impl Planet for Mercury {
-    fn years_during(d: &Duration) -> f64 {
-        d.0 / 0.2408467
-    }
+macro_rules! planet {
+    ($planet_name:ident, $orbital_period:expr) => {
+        pub struct $planet_name;
+        impl Planet for $planet_name {
+            const ORBITAL_PERIOD: f64 = $orbital_period;
+        }
+    };
 }
 
-impl Planet for Venus {
-    fn years_during(d: &Duration) -> f64 {
-        d.0 / 0.61519726
-    }
-}
-
-impl Planet for Mars {
-    fn years_during(d: &Duration) -> f64 {
-        d.0 / 1.8808158
-    }
-}
-
-impl Planet for Jupiter {
-    fn years_during(d: &Duration) -> f64 {
-        d.0 / 11.862615
-    }
-}
-
-impl Planet for Saturn {
-    fn years_during(d: &Duration) -> f64 {
-        d.0 / 29.447498
-    }
-}
-
-impl Planet for Uranus {
-    fn years_during(d: &Duration) -> f64 {
-        d.0 / 84.016846
-    }
-}
-
-impl Planet for Neptune {
-    fn years_during(d: &Duration) -> f64 {
-        d.0 / 164.79132
-    }
-}
+planet!(Earth, 1.0);
+planet!(Mercury, 0.2408467);
+planet!(Venus, 0.61519726);
+planet!(Mars, 1.8808158);
+planet!(Jupiter, 11.862615);
+planet!(Saturn, 29.447498);
+planet!(Uranus, 84.016846);
+planet!(Neptune, 164.79132);
