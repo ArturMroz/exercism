@@ -11,3 +11,4 @@ node_modules
 .eslintrc.js
 *.db
 elm-stuff
+.exercism

@@ -1,10 +1,15 @@
 class Raindrops
-  def self.convert(n)
-    result = ''
+  SOUNDS = {
+    3 => 'Pling',
+    5 => 'Plang',
+    7 => 'Plong'
+  }.freeze
 
-    result += 'Pling' if (n % 3).zero?
-    result += 'Plang' if (n % 5).zero?
-    result += 'Plong' if (n % 7).zero?
+  def self.convert(n)
+    result =
+      SOUNDS
+        .map { |key, val| val if (n % key).zero? }
+        .join
 
     result.empty? ? n.to_s : result
   end
