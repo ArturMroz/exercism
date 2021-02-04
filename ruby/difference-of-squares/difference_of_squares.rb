@@ -8,7 +8,7 @@ class Squares
   end
 
   def sum_of_squares
-    (1..@n).map { |n| n.pow(2) }.sum
+    (1..@n).sum { |n| n.pow(2) }
   end
 
   def difference
