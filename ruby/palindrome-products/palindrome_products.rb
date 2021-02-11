@@ -1,5 +1,7 @@
 class Palindromes
-  attr_reader :largest, :smallest
+  attr_reader :smallest, :largest
+
+  Result = Struct.new(:value, :factors)
 
   def initialize(max_factor:, min_factor: 1)
     @min = min_factor
@@ -16,33 +18,20 @@ class Palindromes
 
         next if product.to_s != product.to_s.reverse
 
-        if product == smallest_product
-          @smallest&.add_factors(a, b)
-        elsif product < smallest_product
-          @smallest = Result.new(product, a, b)
+        if product < smallest_product
+          @smallest = Result.new(product, [[a, b]])
           smallest_product = product
+        elsif product == smallest_product
+          @smallest&.factors&.push([a, b])
         end
 
-        if product == largest_product
-          @largest&.add_factors(a, b)
-        elsif product > largest_product
-          @largest = Result.new(product, a, b)
+        if product > largest_product
+          @largest = Result.new(product, [[a, b]])
           largest_product = product
+        elsif product == largest_product
+          @largest&.factors&.push([a, b])
         end
       end
     end
-  end
-end
-
-class Result
-  attr_reader :value, :factors
-
-  def initialize(product, *factors)
-    @value = product
-    @factors = [factors]
-  end
-
-  def add_factors(*factors)
-    @factors.push(factors)
   end
 end
