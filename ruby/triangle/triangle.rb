@@ -16,6 +16,6 @@ class Triangle
   end
 
   def valid?
-    @sides.all?(&:positive?) && @sides.all? { |a| a < @sides.sum - a }
+    @sides.all? { |side| side < @sides.sum - side }
   end
 end
