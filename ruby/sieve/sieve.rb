@@ -7,9 +7,7 @@ class Sieve
     (2..limit).each do |i|
       next unless @primes[i]
 
-      (i + i..limit).step(i).each do |j|
-        @primes[j] = nil
-      end
+      (i + i..limit).step(i).each { |j| @primes[j] = nil }
     end
 
     @primes.compact!
