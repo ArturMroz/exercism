@@ -7,9 +7,10 @@ target
 .pytest_cache
 __pycache__
 *.pyc
-node_modules
+node_modules/
 .eslintrc.js
 *.db
-elm-stuff
-.exercism
+elm-stuff/
+.exercism/
 .lein-failures
+.nrepl-port
