@@ -5,8 +5,8 @@
     (throw (IllegalArgumentException. "Negative numbers not allowed.")))
   (let [aliquot-sum (->> (range 1 n)
                          (filter #(zero? (mod n %)))
-                         (reduce +))]
-    (cond
-      (= aliquot-sum n) :perfect
-      (> aliquot-sum n) :abundant
-      (< aliquot-sum n) :deficient)))
+                         (apply +))]
+    (condp apply [aliquot-sum n]
+      = :perfect
+      > :abundant
+      < :deficient)))
