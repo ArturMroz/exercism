@@ -1,13 +1,18 @@
 (ns armstrong-numbers)
 
-(defn- exp [x n]
+(defn- expt [x n]
   (reduce * (repeat n x)))
 
+(defn- number->digits [n]
+  (if (zero? n)
+    ()
+    (cons (mod n 10)
+          (number->digits (quot n 10)))))
+
 (defn armstrong? [num]
-  (let [stringified (str num)
-        digits-count (count stringified)
-        armstrong (->> stringified
-                       (map #(- (int %) (int \0)))
-                       (map #(exp % digits-count))
+  (let [digits (number->digits num)
+        digits-count (count digits)
+        armstrong (->> digits
+                       (map #(expt % digits-count))
                        (reduce +))]
     (= num armstrong)))
