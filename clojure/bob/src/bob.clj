@@ -10,8 +10,9 @@
 
 (defn response-for [s]
   (cond
-    (and (shout? s) (question? s)) "Calm down, I know what I'm doing!"
-    (shout? s) "Whoa, chill out!"
-    (question? s)"Sure."
-    (str/blank? s) "Fine. Be that way!"
-    :else "Whatever."))
+    (and (shout? s)
+         (question? s)) "Calm down, I know what I'm doing!"
+    (shout? s)          "Whoa, chill out!"
+    (question? s)       "Sure."
+    (str/blank? s)      "Fine. Be that way!"
+    :else               "Whatever."))

@@ -4,15 +4,14 @@
   (reduce * (repeat n x)))
 
 (defn- number->digits [n]
-  (if (zero? n)
-    ()
-    (cons (mod n 10)
-          (number->digits (quot n 10)))))
+  (->> (iterate #(quot % 10) n)
+       (take-while pos?)
+       (map #(mod % 10))))
 
 (defn armstrong? [num]
-  (let [digits (number->digits num)
+  (let [digits       (number->digits num)
         digits-count (count digits)
-        armstrong (->> digits
-                       (map #(expt % digits-count))
-                       (reduce +))]
+        armstrong    (->> digits
+                          (map #(expt % digits-count))
+                          (reduce +))]
     (= num armstrong)))
