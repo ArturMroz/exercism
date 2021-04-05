@@ -3,30 +3,25 @@ package scrabble
 
 import "strings"
 
-func score(ch rune) int {
-	switch ch {
-	case 'D', 'G':
-		return 2
-	case 'B', 'C', 'M', 'P':
-		return 3
-	case 'F', 'H', 'V', 'W', 'Y':
-		return 4
-	case 'K':
-		return 5
-	case 'J', 'X':
-		return 8
-	case 'Q', 'Z':
-		return 10
-	default:
-		return 1
-	}
-}
-
 // Score computes the Scrabble score for given word.
-func Score(word string) int {
-	result := 0
+func Score(word string) (result int) {
 	for _, ch := range strings.ToUpper(word) {
-		result += score(ch)
+		switch ch {
+		case 'D', 'G':
+			result += 2
+		case 'B', 'C', 'M', 'P':
+			result += 3
+		case 'F', 'H', 'V', 'W', 'Y':
+			result += 4
+		case 'K':
+			result += 5
+		case 'J', 'X':
+			result += 8
+		case 'Q', 'Z':
+			result += 10
+		default:
+			result += 1
+		}
 	}
-	return result
+	return
 }
