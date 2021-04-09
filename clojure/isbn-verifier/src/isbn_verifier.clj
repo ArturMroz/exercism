@@ -20,4 +20,5 @@
        (divisible-by? 11)))
 
 (defn isbn? [isbn]
-  ((every-pred valid-format? valid-checksum?) isbn))
+  (boolean (and (valid-format? isbn)
+                (valid-checksum? isbn))))
