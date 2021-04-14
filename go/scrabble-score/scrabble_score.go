@@ -1,12 +1,12 @@
 // Package scrabble provides a method to compute Scrable score.
 package scrabble
 
-import "strings"
+import "unicode"
 
 // Score computes the Scrabble score for given word.
 func Score(word string) (result int) {
-	for _, ch := range strings.ToUpper(word) {
-		switch ch {
+	for _, ch := range word {
+		switch unicode.ToUpper(ch) {
 		case 'D', 'G':
 			result += 2
 		case 'B', 'C', 'M', 'P':
