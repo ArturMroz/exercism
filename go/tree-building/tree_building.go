@@ -1,10 +1,9 @@
 package tree
 
 import (
-	"fmt"
+	"errors"
+	"sort"
 )
-
-const rootID = 0
 
 type Record struct {
 	ID, Parent int
@@ -15,40 +14,39 @@ type Node struct {
 	Children []*Node
 }
 
-// Build converts an unordered slice of Records into a hierarchical tree of Nodes,
-// after validating that the tree is not a graph and that the records have
-// a contiguous range of IDs.
+const rootID = 0
+
+// Build parses a flat list of records into a tree
 func Build(records []Record) (*Node, error) {
 	if len(records) == 0 {
 		return nil, nil
 	}
 
-	positions := make([]int, len(records))
-	for i, r := range records {
-		if r.ID < rootID || r.ID >= len(records) {
-			return nil, fmt.Errorf("out of bounds record id %d", r.ID)
-		}
+	sort.SliceStable(records, func(a, b int) bool {
+		return records[a].ID < records[b].ID
+	})
 
-		positions[r.ID] = i
+	if maxID := records[len(records)-1].ID; maxID != len(records)-1 {
+		return nil, errors.New("duplicated or non-continuous nodes")
 	}
 
-	nodes := make([]Node, len(records))
-	for i := range positions {
-		r := records[positions[i]]
-		if r.ID != i {
-			return nil, fmt.Errorf("non-contiguous node %d (want %d)", r.ID, i)
-		}
-		validParentForChild := (r.ID > r.Parent) || (r.ID == rootID && r.Parent == rootID)
-		if !validParentForChild {
-			return nil, fmt.Errorf("node %d has impossible parent %d", r.ID, r.Parent)
+	nodes := make([]*Node, len(records))
+	for _, v := range records {
+		nodes[v.ID] = &Node{ID: v.ID}
+		if v.ID == rootID {
+			if v.Parent != rootID {
+				return nil, errors.New("root node has parent")
+			}
+			continue
 		}
 
-		nodes[i].ID = i
-		if i != rootID {
-			p := &nodes[r.Parent]
-			p.Children = append(p.Children, &nodes[i])
+		if v.ID <= v.Parent {
+			return nil, errors.New("tree has circular reference")
 		}
+
+		parent := nodes[v.Parent]
+		parent.Children = append(parent.Children, nodes[v.ID])
 	}
 
-	return &nodes[0], nil
+	return nodes[rootID], nil
 }
