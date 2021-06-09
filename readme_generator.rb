@@ -39,7 +39,7 @@ This table lists solved problems and conviniently links to the solutions in diff
 
 problems_hash.sort.each do |problem, langs|
   problem_name = problem.split('-').map(&:capitalize).join(' ')
-  links = langs.sort.map { |l| "[#{fmt_lang[l]}](tree/master/#{l}/#{problem})" }.join(', ')
+  links = langs.sort.map { |l| "[#{fmt_lang[l]}](#{l}/#{problem})" }.join(', ')
 
   text += "| #{problem_name} | #{links} |\n"
   File.write('README.md', text)
