@@ -5,7 +5,6 @@
 >
 > ― Miyamoto Musashi, The Book of Five Rings
 
-
 My solutions to [exercism.io](https://exercism.io) problems using various languages. For fun and profit.
 
 ## Solved problems
@@ -97,7 +96,7 @@ This table lists solved problems and conviniently links to the solutions in diff
 | Tournament | [Go](go/tournament) |
 | Tree Building | [Go](go/tree-building) |
 | Triangle | [F#](fsharp/triangle), [JavaScript](javascript/triangle), [Ruby](ruby/triangle) |
-| Twelve Days | [F#](fsharp/twelve-days) |
+| Twelve Days | [F#](fsharp/twelve-days), [Go](go/twelve-days) |
 | Two Bucket | [C#](csharp/two-bucket) |
 | Two Fer | [Clojure](clojure/two-fer), [C#](csharp/two-fer), [Elm](elm/two-fer), [Elisp](emacs-lisp/two-fer), [F#](fsharp/two-fer), [Go](go/two-fer), [JavaScript](javascript/two-fer), [Python](python/two-fer), [Ruby](ruby/two-fer), [TypeScript](typescript/two-fer) |
 | Twofer | [Rust](rust/twofer) |
