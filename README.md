@@ -53,7 +53,7 @@ This table lists solved problems and conviniently links to the solutions in diff
 | Luhn | [C#](csharp/luhn), [Elm](elm/luhn), [F#](fsharp/luhn), [Go](go/luhn) |
 | Markdown | [C#](csharp/markdown) |
 | Matching Brackets | [Ruby](ruby/matching-brackets) |
-| Matrix | [C#](csharp/matrix), [F#](fsharp/matrix), [JavaScript](javascript/matrix), [Ruby](ruby/matrix) |
+| Matrix | [C#](csharp/matrix), [F#](fsharp/matrix), [Go](go/matrix), [JavaScript](javascript/matrix), [Ruby](ruby/matrix) |
 | Microwave | [Ruby](ruby/microwave) |
 | Minesweeper | [C#](csharp/minesweeper) |
 | Nth Prime | [F#](fsharp/nth-prime) |
