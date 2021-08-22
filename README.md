@@ -7,9 +7,27 @@
 
 My solutions to [exercism.io](https://exercism.io) problems using various languages. For fun and profit.
 
+## Stats
+
+Total: 279 solutions, 91 unique problems, 11 languages.
+
+| Language | No of solutions | % of total solutions |
+| --- | --- | --- |
+| [F#](fsharp) | 55 | 19.7% |
+| [C#](csharp) | 52 | 18.6% |
+| [Ruby](ruby) | 43 | 15.4% |
+| [Go](go) | 29 | 10.4% |
+| [Clojure](clojure) | 24 | 8.6% |
+| [Python](python) | 16 | 5.7% |
+| [Elm](elm) | 14 | 5.0% |
+| [Elisp](emacs-lisp) | 14 | 5.0% |
+| [JavaScript](javascript) | 12 | 4.3% |
+| [Rust](rust) | 11 | 3.9% |
+| [TypeScript](typescript) | 9 | 3.2% |
+
 ## Solved problems
 
-This table lists solved problems and conviniently links to the solutions in different languages, making it easy to compare the implementations.
+List of solved problems with links to the solutions in different languages (so it's easy to compare the implementations).
 
 | Problem name | Languages |
 | --- | --- |
@@ -34,6 +52,7 @@ This table lists solved problems and conviniently links to the solutions in diff
 | Difference Of Squares | [Clojure](clojure/difference-of-squares), [Elm](elm/difference-of-squares), [Elisp](emacs-lisp/difference-of-squares), [F#](fsharp/difference-of-squares), [Go](go/difference-of-squares), [Python](python/difference-of-squares), [Ruby](ruby/difference-of-squares), [Rust](rust/difference-of-squares), [TypeScript](typescript/difference-of-squares) |
 | Dnd Character | [C#](csharp/dnd-character), [F#](fsharp/dnd-character) |
 | Dominoes | [C#](csharp/dominoes) |
+| Error Handling | [Go](go/error-handling) |
 | Etl | [Ruby](ruby/etl) |
 | Flatten Array | [C#](csharp/flatten-array), [Ruby](ruby/flatten-array), [TypeScript](typescript/flatten-array) |
 | Food Chain | [C#](csharp/food-chain) |
