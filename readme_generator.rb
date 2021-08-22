@@ -49,7 +49,7 @@ end
 text += %(
 ## Solved problems
 
-List of solved problems with links to the solutions in different languages (so it's easy to compare the implementations).
+List of solved problems with links to the solutions in different languages (helps with comparing the implementations).
 
 | Problem name | Languages |
 | --- | --- |
