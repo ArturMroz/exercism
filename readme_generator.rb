@@ -9,17 +9,18 @@ My solutions to [exercism.io](https://exercism.io) problems using various langua
 )
 
 langs_fmt = {
-  'clojure'    => 'Clojure',
-  'csharp'     => 'C#',
-  'elm'        => 'Elm',
-  'emacs-lisp' => 'Elisp',
-  'fsharp'     => 'F#',
-  'go'         => 'Go',
-  'javascript' => 'JavaScript',
-  'python'     => 'Python',
-  'ruby'       => 'Ruby',
-  'rust'       => 'Rust',
-  'typescript' => 'TypeScript',
+  'clojure'         => 'Clojure',
+  'csharp'          => 'C#',
+  'elm'             => 'Elm',
+  'emacs-lisp'      => 'Elisp',
+  'fsharp'          => 'F#',
+  'go'              => 'Go',
+  'javascript'      => 'JavaScript',
+  'python'          => 'Python',
+  'ruby'            => 'Ruby',
+  'rust'            => 'Rust',
+  'typescript'      => 'TypeScript',
+  'x86-64-assembly' => 'Assembly',
 }
 
 all_solutions = Dir['*/*']

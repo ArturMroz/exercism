@@ -1,7 +1,7 @@
 default rel
 
 section .rodata
-msg: db "Hello, World!", 0
+msg db "Hello, World!"
 
 section .text
 global hello
