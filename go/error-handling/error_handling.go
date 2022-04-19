@@ -6,28 +6,25 @@ import "fmt"
 // closes that resource
 func Use(o ResourceOpener, input string) (err error) {
 	var res Resource
-	for {
-		res, err = o()
-		if err != nil {
-			if _, ok := err.(TransientError); ok {
-				continue
-			} else {
-				return err
-			}
+	res, err = o()
+	for err != nil {
+		if _, ok := err.(TransientError); !ok {
+			return err
 		}
-		break
+		res, err = o()
 	}
-
 	defer res.Close()
 
 	defer func() {
 		if r := recover(); r != nil {
-			frobErr, ok := r.(FrobError)
-			if ok {
-				res.Defrob(frobErr.defrobTag)
-				err = frobErr.inner
-			} else {
-				err = fmt.Errorf("%s", r)
+			switch rerr := r.(type) {
+			case FrobError:
+				res.Defrob(rerr.defrobTag)
+				err = rerr.inner
+			case error:
+				err = rerr
+			default:
+				err = fmt.Errorf("%s", rerr)
 			}
 		}
 	}()
