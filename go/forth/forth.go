@@ -2,16 +2,22 @@ package forth
 
 import (
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
+)
+
+var (
+	errEmptyStack     = errors.New("empty stack")
+	errStackUnderflow = errors.New("not enough values on the stack")
 )
 
 func Forth(input []string) ([]int, error) {
 	stack := []int{}
 	userDefined := map[string][]string{}
 
-	for _, v := range input {
-		tokens := strings.Fields(v)
+	for _, curLine := range input {
+		tokens := strings.Fields(strings.ToLower(curLine)) // poor man's lexer
 		cursor := 0
 
 		for cursor < len(tokens) {
@@ -19,115 +25,102 @@ func Forth(input []string) ([]int, error) {
 
 			userDef, ok := userDefined[curToken]
 			if ok {
-				// inject user defined stuff
+				// cheeky, inject user defined stuff into the current program
 				tokens = append(tokens[:cursor], append(userDef, tokens[cursor+1:]...)...)
-				// fmt.Println(tokens)
 			} else {
 				switch curToken {
 				case "+":
 					if len(stack) <= 1 {
-						return nil, errors.New("not enough values on the stack")
+						return nil, errStackUnderflow
 					}
-
-					result := 0
-					for _, v := range stack {
-						result += v
-					}
-					stack = []int{result}
+					stack[len(stack)-2] += stack[len(stack)-1]
+					stack = stack[:len(stack)-1]
 
 				case "-":
 					if len(stack) <= 1 {
-						return nil, errors.New("not enough values on the  stack")
+						return nil, errStackUnderflow
 					}
-
-					result := stack[0]
-					for i := 1; i < len(stack); i++ {
-						result -= stack[i]
-					}
-					stack = []int{result}
+					stack[len(stack)-2] -= stack[len(stack)-1]
+					stack = stack[:len(stack)-1]
 
 				case "*":
 					if len(stack) <= 1 {
-						return nil, errors.New("not enough values on the  stack")
+						return nil, errStackUnderflow
 					}
-
-					result := 1
-					for _, v := range stack {
-						result *= v
-					}
-					stack = []int{result}
+					stack[len(stack)-2] *= stack[len(stack)-1]
+					stack = stack[:len(stack)-1]
 
 				case "/":
 					if len(stack) <= 1 {
-						return nil, errors.New("not enough values on the  stack")
+						return nil, errStackUnderflow
 					}
-
-					result := stack[0]
-					for i := 1; i < len(stack); i++ {
-						if stack[i] == 0 {
-							return nil, errors.New("dividing by zero")
-						}
-						result /= stack[i]
+					if stack[len(stack)-1] == 0 {
+						return nil, errors.New("dividing by zero")
 					}
-
-					stack = []int{result}
+					stack[len(stack)-2] /= stack[len(stack)-1]
+					stack = stack[:len(stack)-1]
 
 				case "dup":
 					if len(stack) == 0 {
-						return nil, errors.New("couldn't duplicate: empty stack")
+						return nil, fmt.Errorf("cannot dup: %w", errEmptyStack)
 					}
-
-					stackTop := stack[len(stack)-1]
-					stack = append(stack, stackTop)
+					stack = append(stack, stack[len(stack)-1])
 
 				case "drop":
 					if len(stack) == 0 {
-						return nil, errors.New("couldn't drop: empty stack")
+						return nil, fmt.Errorf("cannot drop: %w", errEmptyStack)
 					}
-
 					stack = stack[:len(stack)-1]
 
 				case "swap":
 					if len(stack) <= 1 {
-						return nil, errors.New("couldn't swap: not enough values on the stack")
+						return nil, fmt.Errorf("cannot swap: %w", errStackUnderflow)
 					}
-
 					stack[len(stack)-2], stack[len(stack)-1] = stack[len(stack)-1], stack[len(stack)-2]
 
 				case "over":
 					if len(stack) <= 1 {
-						return nil, errors.New("couldn't over: not enough values on the stack")
+						return nil, fmt.Errorf("cannot over: %w", errStackUnderflow)
 					}
-
 					stack = append(stack, stack[len(stack)-2])
 
 				case ":":
 					cursor++
-					newWord := tokens[cursor]
+
+					wordName := tokens[cursor]
+					if _, err := strconv.Atoi(wordName); err == nil {
+						return nil, errors.New("cannot redefine numbers")
+					}
 
 					cursor++
 					definition := []string{}
-					for tokens[cursor] != ";" {
-						definition = append(definition, tokens[cursor])
+					for tokens[cursor] != ";" || cursor < len(tokens)-1 {
+						if def, ok := userDefined[tokens[cursor]]; ok {
+							// ugly: check if we've got "inception" situation going on
+							// i.e. if the word has already been defined then unwrap it;
+							// only 1 level of nesting supported
+							definition = append(definition, def...)
+						} else {
+							definition = append(definition, tokens[cursor])
+						}
+
 						cursor++
 					}
 
-					userDefined[newWord] = definition
+					userDefined[wordName] = definition
 
 				default:
-					myInt, err := strconv.Atoi(curToken)
+					parsedInt, err := strconv.Atoi(curToken)
 					if err != nil {
-						return nil, errors.New("couldn't cast to int: " + curToken)
+						return nil, errors.New("unknown word: " + curToken)
 					}
-					stack = append(stack, myInt)
+					stack = append(stack, parsedInt)
 				}
 
 				cursor++
 			}
-
 		}
 	}
 
 	return stack, nil
-
 }
