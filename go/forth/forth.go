@@ -13,7 +13,7 @@ var (
 )
 
 func Forth(input []string) ([]int, error) {
-	stack := []int{}
+	stack := make([]int, 0, 2)
 	userDefined := map[string][]string{}
 
 	for _, curLine := range input {
