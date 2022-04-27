@@ -9,19 +9,19 @@ My solutions to [exercism.io](https://exercism.io) problems using various langua
 
 ## Stats
 
-Total: 281 solutions, 91 unique problems, 12 languages.
+Total: 285 solutions, 95 unique problems, 12 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 19.6% |
-| [C#](csharp) | 52 | 18.5% |
-| [Ruby](ruby) | 43 | 15.3% |
-| [Go](go) | 29 | 10.3% |
-| [Clojure](clojure) | 24 | 8.5% |
-| [Python](python) | 16 | 5.7% |
-| [Elm](elm) | 14 | 5.0% |
-| [Elisp](emacs-lisp) | 14 | 5.0% |
-| [JavaScript](javascript) | 12 | 4.3% |
+| [F#](fsharp) | 55 | 19.3% |
+| [C#](csharp) | 52 | 18.2% |
+| [Ruby](ruby) | 43 | 15.1% |
+| [Go](go) | 34 | 11.9% |
+| [Clojure](clojure) | 24 | 8.4% |
+| [Python](python) | 16 | 5.6% |
+| [Elm](elm) | 14 | 4.9% |
+| [Elisp](emacs-lisp) | 13 | 4.6% |
+| [JavaScript](javascript) | 12 | 4.2% |
 | [Rust](rust) | 11 | 3.9% |
 | [TypeScript](typescript) | 9 | 3.2% |
 | [Assembly](x86-64-assembly) | 2 | 0.7% |
@@ -39,11 +39,12 @@ List of solved problems with links to the solutions in different languages (help
 | Anagram | [Clojure](clojure/anagram), [C#](csharp/anagram), [Elisp](emacs-lisp/anagram), [F#](fsharp/anagram), [JavaScript](javascript/anagram), [Ruby](ruby/anagram), [Rust](rust/anagram) |
 | Armstrong Numbers | [Clojure](clojure/armstrong-numbers), [C#](csharp/armstrong-numbers), [Elisp](emacs-lisp/armstrong-numbers), [F#](fsharp/armstrong-numbers), [Go](go/armstrong-numbers), [Ruby](ruby/armstrong-numbers), [Rust](rust/armstrong-numbers), [TypeScript](typescript/armstrong-numbers) |
 | Atbash Cipher | [Clojure](clojure/atbash-cipher), [C#](csharp/atbash-cipher), [Elisp](emacs-lisp/atbash-cipher) |
-| Bank Account | [C#](csharp/bank-account), [F#](fsharp/bank-account) |
+| Bank Account | [C#](csharp/bank-account), [F#](fsharp/bank-account), [Go](go/bank-account) |
 | Beer Song | [Clojure](clojure/beer-song) |
 | Binary Search | [C#](csharp/binary-search), [F#](fsharp/binary-search), [Ruby](ruby/binary-search) |
 | Binary Search Tree | [F#](fsharp/binary-search-tree) |
 | Bob | [Clojure](clojure/bob), [C#](csharp/bob), [F#](fsharp/bob), [Python](python/bob), [Ruby](ruby/bob) |
+| Bowling | [Go](go/bowling) |
 | Bracket Push | [C#](csharp/bracket-push), [Elm](elm/bracket-push), [F#](fsharp/bracket-push) |
 | Circular Buffer | [C#](csharp/circular-buffer) |
 | Clock | [Clojure](clojure/clock), [C#](csharp/clock), [Go](go/clock), [Rust](rust/clock) |
@@ -51,12 +52,14 @@ List of solved problems with links to the solutions in different languages (help
 | Darts | [C#](csharp/darts), [F#](fsharp/darts), [Go](go/darts), [JavaScript](javascript/darts), [Ruby](ruby/darts) |
 | Diamond | [C#](csharp/diamond) |
 | Difference Of Squares | [Clojure](clojure/difference-of-squares), [Elm](elm/difference-of-squares), [Elisp](emacs-lisp/difference-of-squares), [F#](fsharp/difference-of-squares), [Go](go/difference-of-squares), [Python](python/difference-of-squares), [Ruby](ruby/difference-of-squares), [Rust](rust/difference-of-squares), [TypeScript](typescript/difference-of-squares) |
+| Diffie Hellman | [Go](go/diffie-hellman) |
 | Dnd Character | [C#](csharp/dnd-character), [F#](fsharp/dnd-character) |
 | Dominoes | [C#](csharp/dominoes) |
 | Error Handling | [Go](go/error-handling) |
 | Etl | [Ruby](ruby/etl) |
 | Flatten Array | [C#](csharp/flatten-array), [Ruby](ruby/flatten-array), [TypeScript](typescript/flatten-array) |
 | Food Chain | [C#](csharp/food-chain) |
+| Forth | [Go](go/forth) |
 | Gigasecond | [C#](csharp/gigasecond), [F#](fsharp/gigasecond), [Python](python/gigasecond), [Ruby](ruby/gigasecond), [Rust](rust/gigasecond) |
 | Grade School | [C#](csharp/grade-school) |
 | Grains | [C#](csharp/grains), [Elm](elm/grains), [F#](fsharp/grains), [Go](go/grains), [Ruby](ruby/grains) |
@@ -84,7 +87,7 @@ List of solved problems with links to the solutions in different languages (help
 | Parallel Letter Frequency | [C#](csharp/parallel-letter-frequency), [F#](fsharp/parallel-letter-frequency), [Go](go/parallel-letter-frequency) |
 | Pascals Triangle | [C#](csharp/pascals-triangle), [F#](fsharp/pascals-triangle) |
 | Perfect Numbers | [Clojure](clojure/perfect-numbers), [Elisp](emacs-lisp/perfect-numbers), [Go](go/perfect-numbers), [Ruby](ruby/perfect-numbers) |
-| Phone Number | [Clojure](clojure/phone-number), [Elisp](emacs-lisp/phone-number), [F#](fsharp/phone-number), [Ruby](ruby/phone-number) |
+| Phone Number | [Clojure](clojure/phone-number), [F#](fsharp/phone-number), [Ruby](ruby/phone-number) |
 | Pig Latin | [F#](fsharp/pig-latin) |
 | Protein Translation | [F#](fsharp/protein-translation) |
 | Proverb | [F#](fsharp/proverb), [Ruby](ruby/proverb) |
@@ -120,6 +123,7 @@ List of solved problems with links to the solutions in different languages (help
 | Two Bucket | [C#](csharp/two-bucket) |
 | Two Fer | [Clojure](clojure/two-fer), [C#](csharp/two-fer), [Elm](elm/two-fer), [Elisp](emacs-lisp/two-fer), [F#](fsharp/two-fer), [Go](go/two-fer), [JavaScript](javascript/two-fer), [Python](python/two-fer), [Ruby](ruby/two-fer), [TypeScript](typescript/two-fer), [Assembly](x86-64-assembly/two-fer) |
 | Twofer | [Rust](rust/twofer) |
+| Variable Length Quantity | [Go](go/variable-length-quantity) |
 | Word Count | [Clojure](clojure/word-count), [Elm](elm/word-count), [F#](fsharp/word-count), [Python](python/word-count), [Ruby](ruby/word-count) |
 | Yacht | [C#](csharp/yacht), [F#](fsharp/yacht), [Python](python/yacht) |
 | Zipper | [F#](fsharp/zipper) |
