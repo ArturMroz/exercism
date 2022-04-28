@@ -2,8 +2,14 @@ package bowling
 
 import "errors"
 
+const (
+	pinsPerFrame  = 10
+	framesPerGame = 10
+	rollsPerFrame = 2
+)
+
 type Game struct {
-	frames   [10][2]int
+	frames   [framesPerGame][rollsPerFrame]int
 	curFrame int
 	curRoll  int
 	fillBall int
@@ -14,71 +20,63 @@ func NewGame() *Game {
 }
 
 func (g *Game) Roll(pins int) error {
-	if g.curFrame > 9 {
+	if g.curFrame >= framesPerGame {
 		return errors.New("game is over")
 	}
-	if pins < 0 || pins > 10 {
+	if pins < 0 || pins > pinsPerFrame {
 		return errors.New("score for the roll out of bounds")
 	}
 
-	// special rules for the final frame
-	if g.curFrame == 9 {
-		finalFrame := &g.frames[g.curFrame]
-		if g.curRoll == 0 {
-			finalFrame[g.curRoll] = pins
-			g.curRoll++
-		} else if g.curRoll == 1 {
-			finalFrame[g.curRoll] = pins
-			if finalFrame[0]+finalFrame[1] < 10 {
-				g.curFrame++ // game over
-			} else {
-				g.curRoll++
+	frame := &g.frames[g.curFrame]
+	if g.curFrame < framesPerGame-1 { // not a final frame, normal rules apply
+		frame[g.curRoll] = pins
+		if (g.curRoll == 0 && pins == pinsPerFrame) || g.curRoll == 1 { // a strike or 2nd roll, move to the next frame
+			if frame[0]+frame[1] > pinsPerFrame {
+				return errors.New("invalid roll: more points in a frame than max pins")
 			}
-		} else if g.curRoll == 2 {
-			if finalFrame[1] != 10 &&
-				finalFrame[0]+finalFrame[1] != 10 &&
-				finalFrame[1]+pins > 10 {
-				return errors.New("invalid fill ball roll")
+			g.curFrame++
+			g.curRoll = 0
+		} else {
+			g.curRoll = 1
+		}
+	} else { // special rules for the final frame
+		if g.curRoll == 2 { // final bonus roll
+			if frame[1] != pinsPerFrame && // 2nd roll isn't a strike
+				frame[0]+frame[1] != pinsPerFrame && // final frame isn't a spare
+				frame[1]+pins > pinsPerFrame {
+				return errors.New("invalid bonus roll")
 			}
 			g.fillBall = pins
 			g.curFrame++ // game over
+			return nil
 		}
-		return nil
-	}
-
-	frame := &g.frames[g.curFrame]
-	g.frames[g.curFrame][g.curRoll] = pins
-	if g.curRoll == 0 && pins == 10 {
-		g.curFrame++ // that's a strike, move to the next frame straightaway
-	} else if g.curRoll == 0 {
-		g.curRoll = 1
-	} else if g.curRoll == 1 {
-		if frame[0]+frame[1] > 10 {
-			return errors.New("invalid roll: more than 10 points in a frame")
+		frame[g.curRoll] = pins
+		if g.curRoll == 1 && frame[0]+frame[1] < pinsPerFrame {
+			g.curFrame++ // game over; no strike or spare means no bonus roll :(
+			return nil
 		}
-		g.curFrame++
-		g.curRoll = 0
+		g.curRoll++
 	}
 
 	return nil
 }
 
 func (g *Game) Score() (score int, err error) {
-	if g.curFrame != 10 {
+	if g.curFrame < framesPerGame {
 		return 0, errors.New("game has to be finished before scoring")
 	}
 
-	for i := 0; i < 9; i++ {
-		curFrame := g.frames[i]
-		score += curFrame[0] + curFrame[1]
+	for i := 0; i < framesPerGame-1; i++ {
+		firstRoll, secondRoll := g.frames[i][0], g.frames[i][1]
+		score += firstRoll + secondRoll
 		// it's a spare or strike, add next throw to current frame score
-		if curFrame[0]+curFrame[1] == 10 {
+		if firstRoll+secondRoll == pinsPerFrame {
 			score += g.frames[i+1][0]
 		}
 		// it's a strike, add 1 more throw to current frame score
-		if curFrame[0] == 10 {
-			// next throw is also a strike and we aren't at a final frame, reach one frame further
-			if g.frames[i+1][0] == 10 && i+2 != 10 {
+		if firstRoll == pinsPerFrame {
+			// reach even one frame further if next throw is also a strike and we aren't reaching over final frame
+			if g.frames[i+1][0] == pinsPerFrame && i+2 != framesPerGame {
 				score += g.frames[i+2][0]
 			} else {
 				score += g.frames[i+1][1]
@@ -86,8 +84,8 @@ func (g *Game) Score() (score int, err error) {
 		}
 	}
 
-	// final frame
-	score += g.frames[9][0] + g.frames[9][1] + g.fillBall
+	// final frame, bonuses need not apply
+	score += g.frames[framesPerGame-1][0] + g.frames[framesPerGame-1][1] + g.fillBall
 
 	return score, nil
 }
