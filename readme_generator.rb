@@ -5,7 +5,7 @@ text = %(
 >
 > ― Miyamoto Musashi, The Book of Five Rings
 
-My solutions to [exercism.io](https://exercism.io) problems using various languages. For fun and profit.
+My solutions to [exercism.io](https://exercism.io) problems implemented in different programming languages.
 )
 
 langs_fmt = {
@@ -15,6 +15,7 @@ langs_fmt = {
   'emacs-lisp'      => 'Elisp',
   'fsharp'          => 'F#',
   'go'              => 'Go',
+  'haskell'         => 'Haskell',
   'javascript'      => 'JavaScript',
   'python'          => 'Python',
   'ruby'            => 'Ruby',
@@ -29,7 +30,7 @@ langs_count = Hash.new(0)
 
 all_solutions.each do |dir|
   lang, problem = dir.split('/')
-  problems_hash[problem] = problems_hash[problem].push(lang)
+  problems_hash[problem] <<= lang
   langs_count[lang] += 1
 end
 
@@ -62,5 +63,13 @@ problems_hash.sort.each do |problem, langs|
 
   text += "| #{problem_name} | #{links} |\n"
 end
+
+text += %(
+## Contributions
+
+This repository serves as a personal collection of my own solutions. However, if you find any issues
+or have suggestions for improvements, feel free to open an issue or submit a pull request.
+Contributions from the community are always welcome!
+)
 
 File.write('README.md', text)
