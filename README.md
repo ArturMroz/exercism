@@ -9,22 +9,22 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 294 solutions, 95 unique problems, 13 languages.
+Total: 296 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 18.7% |
-| [C#](csharp) | 52 | 17.7% |
-| [Ruby](ruby) | 43 | 14.6% |
-| [Go](go) | 37 | 12.6% |
-| [Clojure](clojure) | 24 | 8.2% |
+| [F#](fsharp) | 55 | 18.6% |
+| [C#](csharp) | 52 | 17.6% |
+| [Ruby](ruby) | 43 | 14.5% |
+| [Go](go) | 37 | 12.5% |
+| [Clojure](clojure) | 24 | 8.1% |
 | [Python](python) | 16 | 5.4% |
-| [Elm](elm) | 14 | 4.8% |
+| [Elm](elm) | 14 | 4.7% |
 | [Elisp](emacs-lisp) | 13 | 4.4% |
 | [JavaScript](javascript) | 12 | 4.1% |
 | [Rust](rust) | 11 | 3.7% |
-| [TypeScript](typescript) | 9 | 3.1% |
-| [Haskell](haskell) | 6 | 2.0% |
+| [TypeScript](typescript) | 9 | 3.0% |
+| [Haskell](haskell) | 8 | 2.7% |
 | [Assembly](x86-64-assembly) | 2 | 0.7% |
 
 ## Solved problems
@@ -82,7 +82,7 @@ List of solved problems with links to the solutions in different languages (help
 | Minesweeper | [C#](csharp/minesweeper) |
 | Nth Prime | [F#](fsharp/nth-prime) |
 | Nth Prime 2 | [F#](fsharp/nth-prime-2) |
-| Nucleotide Count | [Clojure](clojure/nucleotide-count), [C#](csharp/nucleotide-count), [Elm](elm/nucleotide-count), [Elisp](emacs-lisp/nucleotide-count), [F#](fsharp/nucleotide-count), [Go](go/nucleotide-count), [Ruby](ruby/nucleotide-count) |
+| Nucleotide Count | [Clojure](clojure/nucleotide-count), [C#](csharp/nucleotide-count), [Elm](elm/nucleotide-count), [Elisp](emacs-lisp/nucleotide-count), [F#](fsharp/nucleotide-count), [Go](go/nucleotide-count), [Haskell](haskell/nucleotide-count), [Ruby](ruby/nucleotide-count) |
 | Palindrome Products | [C#](csharp/palindrome-products), [Ruby](ruby/palindrome-products) |
 | Pangram | [C#](csharp/pangram), [Elisp](emacs-lisp/pangram), [F#](fsharp/pangram), [Haskell](haskell/pangram), [JavaScript](javascript/pangram), [Python](python/pangram), [Ruby](ruby/pangram) |
 | Parallel Letter Frequency | [C#](csharp/parallel-letter-frequency), [F#](fsharp/parallel-letter-frequency), [Go](go/parallel-letter-frequency) |
@@ -102,7 +102,7 @@ List of solved problems with links to the solutions in different languages (help
 | Resistor Color Trio | [Ruby](ruby/resistor-color-trio) |
 | Rest Api | [F#](fsharp/rest-api) |
 | Reverse String | [Clojure](clojure/reverse-string), [C#](csharp/reverse-string), [F#](fsharp/reverse-string), [JavaScript](javascript/reverse-string), [Python](python/reverse-string), [Rust](rust/reverse-string) |
-| Rna Transcription | [Clojure](clojure/rna-transcription), [C#](csharp/rna-transcription), [Elm](elm/rna-transcription), [F#](fsharp/rna-transcription), [Go](go/rna-transcription), [JavaScript](javascript/rna-transcription), [Python](python/rna-transcription), [Ruby](ruby/rna-transcription) |
+| Rna Transcription | [Clojure](clojure/rna-transcription), [C#](csharp/rna-transcription), [Elm](elm/rna-transcription), [F#](fsharp/rna-transcription), [Go](go/rna-transcription), [Haskell](haskell/rna-transcription), [JavaScript](javascript/rna-transcription), [Python](python/rna-transcription), [Ruby](ruby/rna-transcription) |
 | Robot Name | [F#](fsharp/robot-name), [Go](go/robot-name), [Python](python/robot-name) |
 | Robot Simulator | [C#](csharp/robot-simulator) |
 | Rotational Cipher | [C#](csharp/rotational-cipher) |
