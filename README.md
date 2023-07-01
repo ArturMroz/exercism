@@ -9,22 +9,22 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 296 solutions, 95 unique problems, 13 languages.
+Total: 299 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 18.6% |
-| [C#](csharp) | 52 | 17.6% |
-| [Ruby](ruby) | 43 | 14.5% |
-| [Go](go) | 37 | 12.5% |
-| [Clojure](clojure) | 24 | 8.1% |
+| [F#](fsharp) | 55 | 18.4% |
+| [C#](csharp) | 52 | 17.4% |
+| [Ruby](ruby) | 43 | 14.4% |
+| [Go](go) | 37 | 12.4% |
+| [Clojure](clojure) | 24 | 8.0% |
 | [Python](python) | 16 | 5.4% |
 | [Elm](elm) | 14 | 4.7% |
-| [Elisp](emacs-lisp) | 13 | 4.4% |
-| [JavaScript](javascript) | 12 | 4.1% |
+| [Elisp](emacs-lisp) | 13 | 4.3% |
+| [JavaScript](javascript) | 12 | 4.0% |
+| [Haskell](haskell) | 11 | 3.7% |
 | [Rust](rust) | 11 | 3.7% |
 | [TypeScript](typescript) | 9 | 3.0% |
-| [Haskell](haskell) | 8 | 2.7% |
 | [Assembly](x86-64-assembly) | 2 | 0.7% |
 
 ## Solved problems
@@ -63,7 +63,7 @@ List of solved problems with links to the solutions in different languages (help
 | Forth | [Go](go/forth) |
 | Gigasecond | [C#](csharp/gigasecond), [F#](fsharp/gigasecond), [Python](python/gigasecond), [Ruby](ruby/gigasecond), [Rust](rust/gigasecond) |
 | Grade School | [C#](csharp/grade-school) |
-| Grains | [C#](csharp/grains), [Elm](elm/grains), [F#](fsharp/grains), [Go](go/grains), [Ruby](ruby/grains) |
+| Grains | [C#](csharp/grains), [Elm](elm/grains), [F#](fsharp/grains), [Go](go/grains), [Haskell](haskell/grains), [Ruby](ruby/grains) |
 | Hamming | [Clojure](clojure/hamming), [C#](csharp/hamming), [Elm](elm/hamming), [F#](fsharp/hamming), [Go](go/hamming), [Python](python/hamming), [Ruby](ruby/hamming) |
 | Hello World | [Clojure](clojure/hello-world), [C#](csharp/hello-world), [Elm](elm/hello-world), [Elisp](emacs-lisp/hello-world), [F#](fsharp/hello-world), [Go](go/hello-world), [Haskell](haskell/hello-world), [JavaScript](javascript/hello-world), [Python](python/hello-world), [Ruby](ruby/hello-world), [Rust](rust/hello-world), [TypeScript](typescript/hello-world), [Assembly](x86-64-assembly/hello-world) |
 | High Scores | [C#](csharp/high-scores), [F#](fsharp/high-scores), [Ruby](ruby/high-scores) |
@@ -115,8 +115,8 @@ List of solved problems with links to the solutions in different languages (help
 | Sieve | [Ruby](ruby/sieve) |
 | Simple Linked List | [C#](csharp/simple-linked-list), [F#](fsharp/simple-linked-list) |
 | Space Age | [Clojure](clojure/space-age), [C#](csharp/space-age), [F#](fsharp/space-age), [Haskell](haskell/space-age), [Python](python/space-age), [Ruby](ruby/space-age), [Rust](rust/space-age) |
-| Strain | [Ruby](ruby/strain), [TypeScript](typescript/strain) |
-| Sum Of Multiples | [Clojure](clojure/sum-of-multiples), [C#](csharp/sum-of-multiples), [F#](fsharp/sum-of-multiples), [Go](go/sum-of-multiples), [Ruby](ruby/sum-of-multiples) |
+| Strain | [Haskell](haskell/strain), [Ruby](ruby/strain), [TypeScript](typescript/strain) |
+| Sum Of Multiples | [Clojure](clojure/sum-of-multiples), [C#](csharp/sum-of-multiples), [F#](fsharp/sum-of-multiples), [Go](go/sum-of-multiples), [Haskell](haskell/sum-of-multiples), [Ruby](ruby/sum-of-multiples) |
 | Tournament | [Go](go/tournament) |
 | Tree Building | [Go](go/tree-building) |
 | Triangle | [F#](fsharp/triangle), [JavaScript](javascript/triangle), [Ruby](ruby/triangle) |
