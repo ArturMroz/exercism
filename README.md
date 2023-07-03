@@ -9,20 +9,20 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 299 solutions, 95 unique problems, 13 languages.
+Total: 300 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 18.4% |
-| [C#](csharp) | 52 | 17.4% |
-| [Ruby](ruby) | 43 | 14.4% |
-| [Go](go) | 37 | 12.4% |
+| [F#](fsharp) | 55 | 18.3% |
+| [C#](csharp) | 52 | 17.3% |
+| [Ruby](ruby) | 43 | 14.3% |
+| [Go](go) | 37 | 12.3% |
 | [Clojure](clojure) | 24 | 8.0% |
-| [Python](python) | 16 | 5.4% |
+| [Python](python) | 16 | 5.3% |
 | [Elm](elm) | 14 | 4.7% |
 | [Elisp](emacs-lisp) | 13 | 4.3% |
+| [Haskell](haskell) | 12 | 4.0% |
 | [JavaScript](javascript) | 12 | 4.0% |
-| [Haskell](haskell) | 11 | 3.7% |
 | [Rust](rust) | 11 | 3.7% |
 | [TypeScript](typescript) | 9 | 3.0% |
 | [Assembly](x86-64-assembly) | 2 | 0.7% |
@@ -34,7 +34,7 @@ List of solved problems with links to the solutions in different languages (help
 | Problem name | Languages |
 | --- | --- |
 | Accumulate | [C#](csharp/accumulate), [F#](fsharp/accumulate), [Ruby](ruby/accumulate), [TypeScript](typescript/accumulate) |
-| Acronym | [C#](csharp/acronym), [Elisp](emacs-lisp/acronym), [F#](fsharp/acronym), [Ruby](ruby/acronym) |
+| Acronym | [C#](csharp/acronym), [Elisp](emacs-lisp/acronym), [F#](fsharp/acronym), [Haskell](haskell/acronym), [Ruby](ruby/acronym) |
 | All Your Base | [F#](fsharp/all-your-base) |
 | Allergies | [Elm](elm/allergies), [Elisp](emacs-lisp/allergies), [F#](fsharp/allergies), [Go](go/allergies) |
 | Anagram | [Clojure](clojure/anagram), [C#](csharp/anagram), [Elisp](emacs-lisp/anagram), [F#](fsharp/anagram), [JavaScript](javascript/anagram), [Ruby](ruby/anagram), [Rust](rust/anagram) |
