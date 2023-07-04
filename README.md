@@ -9,7 +9,7 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 300 solutions, 95 unique problems, 13 languages.
+Total: 301 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ Total: 300 solutions, 95 unique problems, 13 languages.
 | [Python](python) | 16 | 5.3% |
 | [Elm](elm) | 14 | 4.7% |
 | [Elisp](emacs-lisp) | 13 | 4.3% |
-| [Haskell](haskell) | 12 | 4.0% |
+| [Haskell](haskell) | 13 | 4.3% |
 | [JavaScript](javascript) | 12 | 4.0% |
 | [Rust](rust) | 11 | 3.7% |
 | [TypeScript](typescript) | 9 | 3.0% |
@@ -87,7 +87,7 @@ List of solved problems with links to the solutions in different languages (help
 | Pangram | [C#](csharp/pangram), [Elisp](emacs-lisp/pangram), [F#](fsharp/pangram), [Haskell](haskell/pangram), [JavaScript](javascript/pangram), [Python](python/pangram), [Ruby](ruby/pangram) |
 | Parallel Letter Frequency | [C#](csharp/parallel-letter-frequency), [F#](fsharp/parallel-letter-frequency), [Go](go/parallel-letter-frequency) |
 | Pascals Triangle | [C#](csharp/pascals-triangle), [F#](fsharp/pascals-triangle) |
-| Perfect Numbers | [Clojure](clojure/perfect-numbers), [Elisp](emacs-lisp/perfect-numbers), [Go](go/perfect-numbers), [Ruby](ruby/perfect-numbers) |
+| Perfect Numbers | [Clojure](clojure/perfect-numbers), [Elisp](emacs-lisp/perfect-numbers), [Go](go/perfect-numbers), [Haskell](haskell/perfect-numbers), [Ruby](ruby/perfect-numbers) |
 | Phone Number | [Clojure](clojure/phone-number), [F#](fsharp/phone-number), [Ruby](ruby/phone-number) |
 | Pig Latin | [F#](fsharp/pig-latin) |
 | Protein Translation | [F#](fsharp/protein-translation) |

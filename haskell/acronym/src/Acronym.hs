@@ -1,6 +1,5 @@
-
 module Acronym (abbreviate) where
-import Data.Char
+import Data.Char ( isUpper, toLower, toUpper )
 
 abbreviate :: String -> String
 abbreviate s = map (toUpper . head) abbreviatedWords
