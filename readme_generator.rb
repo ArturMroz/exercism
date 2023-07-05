@@ -24,27 +24,27 @@ langs_fmt = {
   'x86-64-assembly' => 'Assembly',
 }
 
-all_solutions = Dir['*/*']
-problems_hash = Hash.new { [] }
+solutions = Dir['*/*']
+problems = Hash.new { [] }
 langs_count = Hash.new(0)
 
-all_solutions.each do |dir|
+solutions.each do |dir|
   lang, problem = dir.split('/')
-  problems_hash[problem] <<= lang
+  problems[problem] <<= lang
   langs_count[lang] += 1
 end
 
 text += %(
 ## Stats
 
-Total: #{all_solutions.size} solutions, #{problems_hash.size} unique problems, #{langs_fmt.size} languages.
+Total: #{solutions.size} solutions, #{problems.size} unique problems, #{langs_fmt.size} languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
 )
 
 langs_count.sort_by { |_, v| -v }.each do |lang, count|
-  total_percent = (count.to_f / all_solutions.size * 100).round(1)
+  total_percent = (count.to_f / solutions.size * 100).round(1)
   text += "| [#{langs_fmt[lang]}](#{lang}) | #{count} | #{total_percent}% |\n"
 end
 
@@ -57,7 +57,7 @@ List of solved problems with links to the solutions in different languages (help
 | --- | --- |
 )
 
-problems_hash.sort.each do |problem, langs|
+problems.sort.each do |problem, langs|
   problem_name = problem.split('-').map(&:capitalize).join(' ')
   links = langs.sort.map { |l| "[#{langs_fmt[l]}](#{l}/#{problem})" }.join(', ')
 
