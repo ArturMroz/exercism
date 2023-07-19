@@ -9,20 +9,20 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 303 solutions, 95 unique problems, 13 languages.
+Total: 304 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 18.2% |
-| [C#](csharp) | 52 | 17.2% |
-| [Ruby](ruby) | 43 | 14.2% |
+| [F#](fsharp) | 55 | 18.1% |
+| [C#](csharp) | 52 | 17.1% |
+| [Ruby](ruby) | 43 | 14.1% |
 | [Go](go) | 37 | 12.2% |
 | [Clojure](clojure) | 24 | 7.9% |
+| [Haskell](haskell) | 16 | 5.3% |
 | [Python](python) | 16 | 5.3% |
-| [Haskell](haskell) | 15 | 5.0% |
 | [Elm](elm) | 14 | 4.6% |
 | [Elisp](emacs-lisp) | 13 | 4.3% |
-| [JavaScript](javascript) | 12 | 4.0% |
+| [JavaScript](javascript) | 12 | 3.9% |
 | [Rust](rust) | 11 | 3.6% |
 | [TypeScript](typescript) | 9 | 3.0% |
 | [Assembly](x86-64-assembly) | 2 | 0.7% |
@@ -94,7 +94,7 @@ List of solved problems with links to the solutions in different languages (help
 | Proverb | [F#](fsharp/proverb), [Ruby](ruby/proverb) |
 | Pythagorean Triplet | [C#](csharp/pythagorean-triplet), [Ruby](ruby/pythagorean-triplet) |
 | Queen Attack | [F#](fsharp/queen-attack), [JavaScript](javascript/queen-attack) |
-| Raindrops | [Clojure](clojure/raindrops), [C#](csharp/raindrops), [Elm](elm/raindrops), [Elisp](emacs-lisp/raindrops), [F#](fsharp/raindrops), [Go](go/raindrops), [Ruby](ruby/raindrops), [Rust](rust/raindrops) |
+| Raindrops | [Clojure](clojure/raindrops), [C#](csharp/raindrops), [Elm](elm/raindrops), [Elisp](emacs-lisp/raindrops), [F#](fsharp/raindrops), [Go](go/raindrops), [Haskell](haskell/raindrops), [Ruby](ruby/raindrops), [Rust](rust/raindrops) |
 | Rational Numbers | [C#](csharp/rational-numbers) |
 | React | [C#](csharp/react) |
 | Resistor Color | [C#](csharp/resistor-color), [Ruby](ruby/resistor-color) |
