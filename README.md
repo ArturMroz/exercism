@@ -9,17 +9,17 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 304 solutions, 95 unique problems, 13 languages.
+Total: 305 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 18.1% |
-| [C#](csharp) | 52 | 17.1% |
+| [F#](fsharp) | 55 | 18.0% |
+| [C#](csharp) | 52 | 17.0% |
 | [Ruby](ruby) | 43 | 14.1% |
-| [Go](go) | 37 | 12.2% |
+| [Go](go) | 37 | 12.1% |
 | [Clojure](clojure) | 24 | 7.9% |
-| [Haskell](haskell) | 16 | 5.3% |
-| [Python](python) | 16 | 5.3% |
+| [Haskell](haskell) | 17 | 5.6% |
+| [Python](python) | 16 | 5.2% |
 | [Elm](elm) | 14 | 4.6% |
 | [Elisp](emacs-lisp) | 13 | 4.3% |
 | [JavaScript](javascript) | 12 | 3.9% |
@@ -38,7 +38,7 @@ List of solved problems with links to the solutions in different languages (help
 | All Your Base | [F#](fsharp/all-your-base) |
 | Allergies | [Elm](elm/allergies), [Elisp](emacs-lisp/allergies), [F#](fsharp/allergies), [Go](go/allergies) |
 | Anagram | [Clojure](clojure/anagram), [C#](csharp/anagram), [Elisp](emacs-lisp/anagram), [F#](fsharp/anagram), [JavaScript](javascript/anagram), [Ruby](ruby/anagram), [Rust](rust/anagram) |
-| Armstrong Numbers | [Clojure](clojure/armstrong-numbers), [C#](csharp/armstrong-numbers), [Elisp](emacs-lisp/armstrong-numbers), [F#](fsharp/armstrong-numbers), [Go](go/armstrong-numbers), [Ruby](ruby/armstrong-numbers), [Rust](rust/armstrong-numbers), [TypeScript](typescript/armstrong-numbers) |
+| Armstrong Numbers | [Clojure](clojure/armstrong-numbers), [C#](csharp/armstrong-numbers), [Elisp](emacs-lisp/armstrong-numbers), [F#](fsharp/armstrong-numbers), [Go](go/armstrong-numbers), [Haskell](haskell/armstrong-numbers), [Ruby](ruby/armstrong-numbers), [Rust](rust/armstrong-numbers), [TypeScript](typescript/armstrong-numbers) |
 | Atbash Cipher | [Clojure](clojure/atbash-cipher), [C#](csharp/atbash-cipher), [Elisp](emacs-lisp/atbash-cipher) |
 | Bank Account | [C#](csharp/bank-account), [F#](fsharp/bank-account), [Go](go/bank-account) |
 | Beer Song | [Clojure](clojure/beer-song) |
