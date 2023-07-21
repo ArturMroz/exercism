@@ -9,23 +9,23 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 306 solutions, 95 unique problems, 13 languages.
+Total: 308 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 18.0% |
-| [C#](csharp) | 52 | 17.0% |
-| [Ruby](ruby) | 43 | 14.1% |
-| [Go](go) | 37 | 12.1% |
+| [F#](fsharp) | 55 | 17.9% |
+| [C#](csharp) | 52 | 16.9% |
+| [Ruby](ruby) | 43 | 14.0% |
+| [Go](go) | 37 | 12.0% |
 | [Clojure](clojure) | 24 | 7.8% |
-| [Haskell](haskell) | 18 | 5.9% |
+| [Haskell](haskell) | 20 | 6.5% |
 | [Python](python) | 16 | 5.2% |
-| [Elm](elm) | 14 | 4.6% |
+| [Elm](elm) | 14 | 4.5% |
 | [Elisp](emacs-lisp) | 13 | 4.2% |
 | [JavaScript](javascript) | 12 | 3.9% |
 | [Rust](rust) | 11 | 3.6% |
 | [TypeScript](typescript) | 9 | 2.9% |
-| [Assembly](x86-64-assembly) | 2 | 0.7% |
+| [Assembly](x86-64-assembly) | 2 | 0.6% |
 
 ## Solved problems
 
@@ -99,14 +99,14 @@ List of solved problems with links to the solutions in different languages (help
 | React | [C#](csharp/react) |
 | Resistor Color | [C#](csharp/resistor-color), [Ruby](ruby/resistor-color) |
 | Resistor Color Duo | [Haskell](haskell/resistor-color-duo), [Ruby](ruby/resistor-color-duo), [TypeScript](typescript/resistor-color-duo) |
-| Resistor Color Trio | [Ruby](ruby/resistor-color-trio) |
+| Resistor Color Trio | [Haskell](haskell/resistor-color-trio), [Ruby](ruby/resistor-color-trio) |
 | Rest Api | [F#](fsharp/rest-api) |
 | Reverse String | [Clojure](clojure/reverse-string), [C#](csharp/reverse-string), [F#](fsharp/reverse-string), [JavaScript](javascript/reverse-string), [Python](python/reverse-string), [Rust](rust/reverse-string) |
 | Rna Transcription | [Clojure](clojure/rna-transcription), [C#](csharp/rna-transcription), [Elm](elm/rna-transcription), [F#](fsharp/rna-transcription), [Go](go/rna-transcription), [Haskell](haskell/rna-transcription), [JavaScript](javascript/rna-transcription), [Python](python/rna-transcription), [Ruby](ruby/rna-transcription) |
 | Robot Name | [F#](fsharp/robot-name), [Go](go/robot-name), [Python](python/robot-name) |
 | Robot Simulator | [C#](csharp/robot-simulator) |
 | Rotational Cipher | [C#](csharp/rotational-cipher) |
-| Run Length Encoding | [Clojure](clojure/run-length-encoding), [Go](go/run-length-encoding), [Ruby](ruby/run-length-encoding) |
+| Run Length Encoding | [Clojure](clojure/run-length-encoding), [Go](go/run-length-encoding), [Haskell](haskell/run-length-encoding), [Ruby](ruby/run-length-encoding) |
 | Saddle Points | [C#](csharp/saddle-points), [F#](fsharp/saddle-points), [Ruby](ruby/saddle-points) |
 | Scale Generator | [Go](go/scale-generator) |
 | Scrabble Score | [Clojure](clojure/scrabble-score), [F#](fsharp/scrabble-score), [Go](go/scrabble-score) |
