@@ -9,7 +9,7 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 305 solutions, 95 unique problems, 13 languages.
+Total: 306 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
@@ -17,14 +17,14 @@ Total: 305 solutions, 95 unique problems, 13 languages.
 | [C#](csharp) | 52 | 17.0% |
 | [Ruby](ruby) | 43 | 14.1% |
 | [Go](go) | 37 | 12.1% |
-| [Clojure](clojure) | 24 | 7.9% |
-| [Haskell](haskell) | 17 | 5.6% |
+| [Clojure](clojure) | 24 | 7.8% |
+| [Haskell](haskell) | 18 | 5.9% |
 | [Python](python) | 16 | 5.2% |
 | [Elm](elm) | 14 | 4.6% |
-| [Elisp](emacs-lisp) | 13 | 4.3% |
+| [Elisp](emacs-lisp) | 13 | 4.2% |
 | [JavaScript](javascript) | 12 | 3.9% |
 | [Rust](rust) | 11 | 3.6% |
-| [TypeScript](typescript) | 9 | 3.0% |
+| [TypeScript](typescript) | 9 | 2.9% |
 | [Assembly](x86-64-assembly) | 2 | 0.7% |
 
 ## Solved problems
@@ -98,7 +98,7 @@ List of solved problems with links to the solutions in different languages (help
 | Rational Numbers | [C#](csharp/rational-numbers) |
 | React | [C#](csharp/react) |
 | Resistor Color | [C#](csharp/resistor-color), [Ruby](ruby/resistor-color) |
-| Resistor Color Duo | [Ruby](ruby/resistor-color-duo), [TypeScript](typescript/resistor-color-duo) |
+| Resistor Color Duo | [Haskell](haskell/resistor-color-duo), [Ruby](ruby/resistor-color-duo), [TypeScript](typescript/resistor-color-duo) |
 | Resistor Color Trio | [Ruby](ruby/resistor-color-trio) |
 | Rest Api | [F#](fsharp/rest-api) |
 | Reverse String | [Clojure](clojure/reverse-string), [C#](csharp/reverse-string), [F#](fsharp/reverse-string), [JavaScript](javascript/reverse-string), [Python](python/reverse-string), [Rust](rust/reverse-string) |
