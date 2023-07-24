@@ -9,21 +9,21 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 308 solutions, 95 unique problems, 13 languages.
+Total: 310 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 17.9% |
-| [C#](csharp) | 52 | 16.9% |
-| [Ruby](ruby) | 43 | 14.0% |
-| [Go](go) | 37 | 12.0% |
-| [Clojure](clojure) | 24 | 7.8% |
-| [Haskell](haskell) | 20 | 6.5% |
+| [F#](fsharp) | 55 | 17.7% |
+| [C#](csharp) | 52 | 16.8% |
+| [Ruby](ruby) | 43 | 13.9% |
+| [Go](go) | 37 | 11.9% |
+| [Clojure](clojure) | 24 | 7.7% |
+| [Haskell](haskell) | 22 | 7.1% |
 | [Python](python) | 16 | 5.2% |
 | [Elm](elm) | 14 | 4.5% |
 | [Elisp](emacs-lisp) | 13 | 4.2% |
 | [JavaScript](javascript) | 12 | 3.9% |
-| [Rust](rust) | 11 | 3.6% |
+| [Rust](rust) | 11 | 3.5% |
 | [TypeScript](typescript) | 9 | 2.9% |
 | [Assembly](x86-64-assembly) | 2 | 0.6% |
 
@@ -54,7 +54,7 @@ List of solved problems with links to the solutions in different languages (help
 | Diamond | [C#](csharp/diamond) |
 | Difference Of Squares | [Clojure](clojure/difference-of-squares), [Elm](elm/difference-of-squares), [Elisp](emacs-lisp/difference-of-squares), [F#](fsharp/difference-of-squares), [Go](go/difference-of-squares), [Python](python/difference-of-squares), [Ruby](ruby/difference-of-squares), [Rust](rust/difference-of-squares), [TypeScript](typescript/difference-of-squares) |
 | Diffie Hellman | [Go](go/diffie-hellman) |
-| Dnd Character | [C#](csharp/dnd-character), [F#](fsharp/dnd-character) |
+| Dnd Character | [C#](csharp/dnd-character), [F#](fsharp/dnd-character), [Haskell](haskell/dnd-character) |
 | Dominoes | [C#](csharp/dominoes) |
 | Error Handling | [Go](go/error-handling) |
 | Etl | [Ruby](ruby/etl) |
@@ -119,7 +119,7 @@ List of solved problems with links to the solutions in different languages (help
 | Sum Of Multiples | [Clojure](clojure/sum-of-multiples), [C#](csharp/sum-of-multiples), [F#](fsharp/sum-of-multiples), [Go](go/sum-of-multiples), [Haskell](haskell/sum-of-multiples), [Ruby](ruby/sum-of-multiples) |
 | Tournament | [Go](go/tournament) |
 | Tree Building | [Go](go/tree-building) |
-| Triangle | [F#](fsharp/triangle), [JavaScript](javascript/triangle), [Ruby](ruby/triangle) |
+| Triangle | [F#](fsharp/triangle), [Haskell](haskell/triangle), [JavaScript](javascript/triangle), [Ruby](ruby/triangle) |
 | Twelve Days | [F#](fsharp/twelve-days), [Go](go/twelve-days) |
 | Two Bucket | [C#](csharp/two-bucket) |
 | Two Fer | [Clojure](clojure/two-fer), [C#](csharp/two-fer), [Elm](elm/two-fer), [Elisp](emacs-lisp/two-fer), [F#](fsharp/two-fer), [Go](go/two-fer), [JavaScript](javascript/two-fer), [Python](python/two-fer), [Ruby](ruby/two-fer), [TypeScript](typescript/two-fer), [Assembly](x86-64-assembly/two-fer) |
