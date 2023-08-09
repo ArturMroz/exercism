@@ -9,20 +9,20 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 310 solutions, 95 unique problems, 13 languages.
+Total: 312 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 17.7% |
-| [C#](csharp) | 52 | 16.8% |
-| [Ruby](ruby) | 43 | 13.9% |
+| [F#](fsharp) | 55 | 17.6% |
+| [C#](csharp) | 52 | 16.7% |
+| [Ruby](ruby) | 43 | 13.8% |
 | [Go](go) | 37 | 11.9% |
 | [Clojure](clojure) | 24 | 7.7% |
-| [Haskell](haskell) | 22 | 7.1% |
-| [Python](python) | 16 | 5.2% |
+| [Haskell](haskell) | 24 | 7.7% |
+| [Python](python) | 16 | 5.1% |
 | [Elm](elm) | 14 | 4.5% |
 | [Elisp](emacs-lisp) | 13 | 4.2% |
-| [JavaScript](javascript) | 12 | 3.9% |
+| [JavaScript](javascript) | 12 | 3.8% |
 | [Rust](rust) | 11 | 3.5% |
 | [TypeScript](typescript) | 9 | 2.9% |
 | [Assembly](x86-64-assembly) | 2 | 0.6% |
@@ -52,7 +52,7 @@ List of solved problems with links to the solutions in different languages (help
 | Collatz Conjecture | [Clojure](clojure/collatz-conjecture), [C#](csharp/collatz-conjecture), [Elm](elm/collatz-conjecture), [F#](fsharp/collatz-conjecture), [Go](go/collatz-conjecture), [Haskell](haskell/collatz-conjecture), [Ruby](ruby/collatz-conjecture) |
 | Darts | [C#](csharp/darts), [F#](fsharp/darts), [Go](go/darts), [JavaScript](javascript/darts), [Ruby](ruby/darts) |
 | Diamond | [C#](csharp/diamond) |
-| Difference Of Squares | [Clojure](clojure/difference-of-squares), [Elm](elm/difference-of-squares), [Elisp](emacs-lisp/difference-of-squares), [F#](fsharp/difference-of-squares), [Go](go/difference-of-squares), [Python](python/difference-of-squares), [Ruby](ruby/difference-of-squares), [Rust](rust/difference-of-squares), [TypeScript](typescript/difference-of-squares) |
+| Difference Of Squares | [Clojure](clojure/difference-of-squares), [Elm](elm/difference-of-squares), [Elisp](emacs-lisp/difference-of-squares), [F#](fsharp/difference-of-squares), [Go](go/difference-of-squares), [Haskell](haskell/difference-of-squares), [Python](python/difference-of-squares), [Ruby](ruby/difference-of-squares), [Rust](rust/difference-of-squares), [TypeScript](typescript/difference-of-squares) |
 | Diffie Hellman | [Go](go/diffie-hellman) |
 | Dnd Character | [C#](csharp/dnd-character), [F#](fsharp/dnd-character), [Haskell](haskell/dnd-character) |
 | Dominoes | [C#](csharp/dominoes) |
@@ -126,7 +126,7 @@ List of solved problems with links to the solutions in different languages (help
 | Twofer | [Rust](rust/twofer) |
 | Variable Length Quantity | [Go](go/variable-length-quantity) |
 | Word Count | [Clojure](clojure/word-count), [Elm](elm/word-count), [F#](fsharp/word-count), [Python](python/word-count), [Ruby](ruby/word-count) |
-| Yacht | [C#](csharp/yacht), [F#](fsharp/yacht), [Python](python/yacht) |
+| Yacht | [C#](csharp/yacht), [F#](fsharp/yacht), [Haskell](haskell/yacht), [Python](python/yacht) |
 | Zipper | [F#](fsharp/zipper) |
 
 ## Contributions
