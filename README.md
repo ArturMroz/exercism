@@ -9,16 +9,16 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 312 solutions, 95 unique problems, 13 languages.
+Total: 313 solutions, 95 unique problems, 13 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
 | [F#](fsharp) | 55 | 17.6% |
-| [C#](csharp) | 52 | 16.7% |
-| [Ruby](ruby) | 43 | 13.8% |
-| [Go](go) | 37 | 11.9% |
+| [C#](csharp) | 52 | 16.6% |
+| [Ruby](ruby) | 43 | 13.7% |
+| [Go](go) | 37 | 11.8% |
+| [Haskell](haskell) | 25 | 8.0% |
 | [Clojure](clojure) | 24 | 7.7% |
-| [Haskell](haskell) | 24 | 7.7% |
 | [Python](python) | 16 | 5.1% |
 | [Elm](elm) | 14 | 4.5% |
 | [Elisp](emacs-lisp) | 13 | 4.2% |
@@ -109,7 +109,7 @@ List of solved problems with links to the solutions in different languages (help
 | Run Length Encoding | [Clojure](clojure/run-length-encoding), [Go](go/run-length-encoding), [Haskell](haskell/run-length-encoding), [Ruby](ruby/run-length-encoding) |
 | Saddle Points | [C#](csharp/saddle-points), [F#](fsharp/saddle-points), [Ruby](ruby/saddle-points) |
 | Scale Generator | [Go](go/scale-generator) |
-| Scrabble Score | [Clojure](clojure/scrabble-score), [F#](fsharp/scrabble-score), [Go](go/scrabble-score) |
+| Scrabble Score | [Clojure](clojure/scrabble-score), [F#](fsharp/scrabble-score), [Go](go/scrabble-score), [Haskell](haskell/scrabble-score) |
 | Secret Handshake | [Go](go/secret-handshake), [JavaScript](javascript/secret-handshake) |
 | Series | [Clojure](clojure/series), [F#](fsharp/series), [Ruby](ruby/series) |
 | Sieve | [Ruby](ruby/sieve) |
