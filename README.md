@@ -9,22 +9,23 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 315 solutions, 95 unique problems, 13 languages.
+Total: 321 solutions, 95 unique problems, 14 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 17.5% |
-| [C#](csharp) | 52 | 16.5% |
-| [Ruby](ruby) | 43 | 13.7% |
-| [Go](go) | 37 | 11.7% |
-| [Haskell](haskell) | 27 | 8.6% |
-| [Clojure](clojure) | 24 | 7.6% |
-| [Python](python) | 16 | 5.1% |
+| [F#](fsharp) | 55 | 17.1% |
+| [C#](csharp) | 52 | 16.2% |
+| [Ruby](ruby) | 43 | 13.4% |
+| [Go](go) | 37 | 11.5% |
+| [Haskell](haskell) | 28 | 8.7% |
+| [Clojure](clojure) | 24 | 7.5% |
+| [Python](python) | 16 | 5.0% |
 | [Elm](elm) | 14 | 4.4% |
-| [Elisp](emacs-lisp) | 13 | 4.1% |
-| [JavaScript](javascript) | 12 | 3.8% |
-| [Rust](rust) | 11 | 3.5% |
-| [TypeScript](typescript) | 9 | 2.9% |
+| [Elisp](emacs-lisp) | 13 | 4.0% |
+| [JavaScript](javascript) | 12 | 3.7% |
+| [Rust](rust) | 11 | 3.4% |
+| [TypeScript](typescript) | 9 | 2.8% |
+| [Zig](zig) | 5 | 1.6% |
 | [Assembly](x86-64-assembly) | 2 | 0.6% |
 
 ## Solved problems
@@ -49,10 +50,10 @@ List of solved problems with links to the solutions in different languages (help
 | Bracket Push | [C#](csharp/bracket-push), [Elm](elm/bracket-push), [F#](fsharp/bracket-push) |
 | Circular Buffer | [C#](csharp/circular-buffer), [Go](go/circular-buffer) |
 | Clock | [Clojure](clojure/clock), [C#](csharp/clock), [Go](go/clock), [Rust](rust/clock) |
-| Collatz Conjecture | [Clojure](clojure/collatz-conjecture), [C#](csharp/collatz-conjecture), [Elm](elm/collatz-conjecture), [F#](fsharp/collatz-conjecture), [Go](go/collatz-conjecture), [Haskell](haskell/collatz-conjecture), [Ruby](ruby/collatz-conjecture) |
+| Collatz Conjecture | [Clojure](clojure/collatz-conjecture), [C#](csharp/collatz-conjecture), [Elm](elm/collatz-conjecture), [F#](fsharp/collatz-conjecture), [Go](go/collatz-conjecture), [Haskell](haskell/collatz-conjecture), [Ruby](ruby/collatz-conjecture), [Zig](zig/collatz-conjecture) |
 | Darts | [C#](csharp/darts), [F#](fsharp/darts), [Go](go/darts), [JavaScript](javascript/darts), [Ruby](ruby/darts) |
 | Diamond | [C#](csharp/diamond) |
-| Difference Of Squares | [Clojure](clojure/difference-of-squares), [Elm](elm/difference-of-squares), [Elisp](emacs-lisp/difference-of-squares), [F#](fsharp/difference-of-squares), [Go](go/difference-of-squares), [Haskell](haskell/difference-of-squares), [Python](python/difference-of-squares), [Ruby](ruby/difference-of-squares), [Rust](rust/difference-of-squares), [TypeScript](typescript/difference-of-squares) |
+| Difference Of Squares | [Clojure](clojure/difference-of-squares), [Elm](elm/difference-of-squares), [Elisp](emacs-lisp/difference-of-squares), [F#](fsharp/difference-of-squares), [Go](go/difference-of-squares), [Haskell](haskell/difference-of-squares), [Python](python/difference-of-squares), [Ruby](ruby/difference-of-squares), [Rust](rust/difference-of-squares), [TypeScript](typescript/difference-of-squares), [Zig](zig/difference-of-squares) |
 | Diffie Hellman | [Go](go/diffie-hellman) |
 | Dnd Character | [C#](csharp/dnd-character), [F#](fsharp/dnd-character), [Haskell](haskell/dnd-character) |
 | Dominoes | [C#](csharp/dominoes) |
@@ -62,16 +63,16 @@ List of solved problems with links to the solutions in different languages (help
 | Food Chain | [C#](csharp/food-chain) |
 | Forth | [Go](go/forth) |
 | Gigasecond | [C#](csharp/gigasecond), [F#](fsharp/gigasecond), [Python](python/gigasecond), [Ruby](ruby/gigasecond), [Rust](rust/gigasecond) |
-| Grade School | [C#](csharp/grade-school) |
+| Grade School | [C#](csharp/grade-school), [Haskell](haskell/grade-school) |
 | Grains | [C#](csharp/grains), [Elm](elm/grains), [F#](fsharp/grains), [Go](go/grains), [Haskell](haskell/grains), [Ruby](ruby/grains) |
 | Hamming | [Clojure](clojure/hamming), [C#](csharp/hamming), [Elm](elm/hamming), [F#](fsharp/hamming), [Go](go/hamming), [Haskell](haskell/hamming), [Python](python/hamming), [Ruby](ruby/hamming) |
-| Hello World | [Clojure](clojure/hello-world), [C#](csharp/hello-world), [Elm](elm/hello-world), [Elisp](emacs-lisp/hello-world), [F#](fsharp/hello-world), [Go](go/hello-world), [Haskell](haskell/hello-world), [JavaScript](javascript/hello-world), [Python](python/hello-world), [Ruby](ruby/hello-world), [Rust](rust/hello-world), [TypeScript](typescript/hello-world), [Assembly](x86-64-assembly/hello-world) |
+| Hello World | [Clojure](clojure/hello-world), [C#](csharp/hello-world), [Elm](elm/hello-world), [Elisp](emacs-lisp/hello-world), [F#](fsharp/hello-world), [Go](go/hello-world), [Haskell](haskell/hello-world), [JavaScript](javascript/hello-world), [Python](python/hello-world), [Ruby](ruby/hello-world), [Rust](rust/hello-world), [TypeScript](typescript/hello-world), [Assembly](x86-64-assembly/hello-world), [Zig](zig/hello-world) |
 | High Scores | [C#](csharp/high-scores), [F#](fsharp/high-scores), [Ruby](ruby/high-scores) |
 | Isbn Verifier | [Clojure](clojure/isbn-verifier), [C#](csharp/isbn-verifier), [Haskell](haskell/isbn-verifier), [Python](python/isbn-verifier) |
 | Isogram | [F#](fsharp/isogram), [Go](go/isogram), [Haskell](haskell/isogram), [Python](python/isogram), [Ruby](ruby/isogram) |
 | Kindergarten Garden | [C#](csharp/kindergarten-garden), [F#](fsharp/kindergarten-garden) |
 | Largest Series Product | [F#](fsharp/largest-series-product) |
-| Leap | [C#](csharp/leap), [Elm](elm/leap), [Elisp](emacs-lisp/leap), [F#](fsharp/leap), [Haskell](haskell/leap), [JavaScript](javascript/leap), [Python](python/leap), [Ruby](ruby/leap), [Rust](rust/leap), [TypeScript](typescript/leap) |
+| Leap | [C#](csharp/leap), [Elm](elm/leap), [Elisp](emacs-lisp/leap), [F#](fsharp/leap), [Haskell](haskell/leap), [JavaScript](javascript/leap), [Python](python/leap), [Ruby](ruby/leap), [Rust](rust/leap), [TypeScript](typescript/leap), [Zig](zig/leap) |
 | Linked List | [F#](fsharp/linked-list), [Go](go/linked-list) |
 | List Ops | [Go](go/list-ops) |
 | Luhn | [C#](csharp/luhn), [Elm](elm/luhn), [F#](fsharp/luhn), [Go](go/luhn) |
@@ -122,7 +123,7 @@ List of solved problems with links to the solutions in different languages (help
 | Triangle | [F#](fsharp/triangle), [Haskell](haskell/triangle), [JavaScript](javascript/triangle), [Ruby](ruby/triangle) |
 | Twelve Days | [F#](fsharp/twelve-days), [Go](go/twelve-days) |
 | Two Bucket | [C#](csharp/two-bucket) |
-| Two Fer | [Clojure](clojure/two-fer), [C#](csharp/two-fer), [Elm](elm/two-fer), [Elisp](emacs-lisp/two-fer), [F#](fsharp/two-fer), [Go](go/two-fer), [JavaScript](javascript/two-fer), [Python](python/two-fer), [Ruby](ruby/two-fer), [TypeScript](typescript/two-fer), [Assembly](x86-64-assembly/two-fer) |
+| Two Fer | [Clojure](clojure/two-fer), [C#](csharp/two-fer), [Elm](elm/two-fer), [Elisp](emacs-lisp/two-fer), [F#](fsharp/two-fer), [Go](go/two-fer), [JavaScript](javascript/two-fer), [Python](python/two-fer), [Ruby](ruby/two-fer), [TypeScript](typescript/two-fer), [Assembly](x86-64-assembly/two-fer), [Zig](zig/two-fer) |
 | Twofer | [Rust](rust/twofer) |
 | Variable Length Quantity | [Go](go/variable-length-quantity) |
 | Word Count | [Clojure](clojure/word-count), [Elm](elm/word-count), [F#](fsharp/word-count), [Python](python/word-count), [Ruby](ruby/word-count) |

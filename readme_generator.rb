@@ -22,6 +22,7 @@ langs_fmt = {
   'rust'            => 'Rust',
   'typescript'      => 'TypeScript',
   'x86-64-assembly' => 'Assembly',
+  'zig'             => 'Zig',
 }
 
 solutions = Dir['*/*']
