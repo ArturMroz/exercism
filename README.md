@@ -9,23 +9,23 @@ My solutions to [exercism.io](https://exercism.io) problems implemented in diffe
 
 ## Stats
 
-Total: 321 solutions, 95 unique problems, 14 languages.
+Total: 323 solutions, 95 unique problems, 14 languages.
 
 | Language | No of solutions | % of total solutions |
 | --- | --- | --- |
-| [F#](fsharp) | 55 | 17.1% |
-| [C#](csharp) | 52 | 16.2% |
-| [Ruby](ruby) | 43 | 13.4% |
+| [F#](fsharp) | 55 | 17.0% |
+| [C#](csharp) | 52 | 16.1% |
+| [Ruby](ruby) | 43 | 13.3% |
 | [Go](go) | 37 | 11.5% |
 | [Haskell](haskell) | 28 | 8.7% |
-| [Clojure](clojure) | 24 | 7.5% |
+| [Clojure](clojure) | 24 | 7.4% |
 | [Python](python) | 16 | 5.0% |
-| [Elm](elm) | 14 | 4.4% |
+| [Elm](elm) | 14 | 4.3% |
 | [Elisp](emacs-lisp) | 13 | 4.0% |
 | [JavaScript](javascript) | 12 | 3.7% |
 | [Rust](rust) | 11 | 3.4% |
 | [TypeScript](typescript) | 9 | 2.8% |
-| [Zig](zig) | 5 | 1.6% |
+| [Zig](zig) | 7 | 2.2% |
 | [Assembly](x86-64-assembly) | 2 | 0.6% |
 
 ## Solved problems
@@ -39,7 +39,7 @@ List of solved problems with links to the solutions in different languages (help
 | All Your Base | [F#](fsharp/all-your-base) |
 | Allergies | [Elm](elm/allergies), [Elisp](emacs-lisp/allergies), [F#](fsharp/allergies), [Go](go/allergies) |
 | Anagram | [Clojure](clojure/anagram), [C#](csharp/anagram), [Elisp](emacs-lisp/anagram), [F#](fsharp/anagram), [JavaScript](javascript/anagram), [Ruby](ruby/anagram), [Rust](rust/anagram) |
-| Armstrong Numbers | [Clojure](clojure/armstrong-numbers), [C#](csharp/armstrong-numbers), [Elisp](emacs-lisp/armstrong-numbers), [F#](fsharp/armstrong-numbers), [Go](go/armstrong-numbers), [Haskell](haskell/armstrong-numbers), [Ruby](ruby/armstrong-numbers), [Rust](rust/armstrong-numbers), [TypeScript](typescript/armstrong-numbers) |
+| Armstrong Numbers | [Clojure](clojure/armstrong-numbers), [C#](csharp/armstrong-numbers), [Elisp](emacs-lisp/armstrong-numbers), [F#](fsharp/armstrong-numbers), [Go](go/armstrong-numbers), [Haskell](haskell/armstrong-numbers), [Ruby](ruby/armstrong-numbers), [Rust](rust/armstrong-numbers), [TypeScript](typescript/armstrong-numbers), [Zig](zig/armstrong-numbers) |
 | Atbash Cipher | [Clojure](clojure/atbash-cipher), [C#](csharp/atbash-cipher), [Elisp](emacs-lisp/atbash-cipher) |
 | Bank Account | [C#](csharp/bank-account), [F#](fsharp/bank-account), [Go](go/bank-account) |
 | Beer Song | [Clojure](clojure/beer-song) |
@@ -110,7 +110,7 @@ List of solved problems with links to the solutions in different languages (help
 | Run Length Encoding | [Clojure](clojure/run-length-encoding), [Go](go/run-length-encoding), [Haskell](haskell/run-length-encoding), [Ruby](ruby/run-length-encoding) |
 | Saddle Points | [C#](csharp/saddle-points), [F#](fsharp/saddle-points), [Ruby](ruby/saddle-points) |
 | Scale Generator | [Go](go/scale-generator) |
-| Scrabble Score | [Clojure](clojure/scrabble-score), [F#](fsharp/scrabble-score), [Go](go/scrabble-score), [Haskell](haskell/scrabble-score) |
+| Scrabble Score | [Clojure](clojure/scrabble-score), [F#](fsharp/scrabble-score), [Go](go/scrabble-score), [Haskell](haskell/scrabble-score), [Zig](zig/scrabble-score) |
 | Secret Handshake | [Go](go/secret-handshake), [JavaScript](javascript/secret-handshake) |
 | Series | [Clojure](clojure/series), [F#](fsharp/series), [Ruby](ruby/series) |
 | Sieve | [Ruby](ruby/sieve) |
